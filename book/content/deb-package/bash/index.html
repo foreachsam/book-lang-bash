@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>manual - GNU Bash 學習筆記</title>
+        <title>bash - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/referance/manual/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/referance/manual/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/referance/manual//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash//../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -92,12 +92,12 @@
           <span class="path">
             
               
-                參考文件 <i class="icon icon-link"></i>
+                deb package <i class="icon icon-link"></i>
               
             
           </span>
         
-        manual
+        bash
       </div>
     </div>
     
@@ -162,7 +162,7 @@
       
         
   <li>
-    <a class="" title="index" href="../../deb-package/">
+    <a class="" title="index" href="../">
       index
     </a>
     
@@ -171,9 +171,60 @@
       
         
   <li>
-    <a class="" title="bash" href="../../deb-package/bash/">
+    <a class="current" title="bash" href="./">
       bash
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="下載套件" href="#_1">
+                下載套件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="解開套件" href="#_2">
+                解開套件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="觀看資料夾結構" href="#_3">
+                觀看資料夾結構
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="manpage" href="#manpage">
+                manpage
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="其他文件" href="#_4">
+                其他文件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="skel 設定檔" href="#skel">
+                skel 設定檔
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="設定檔" href="#_5">
+                設定檔
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -189,24 +240,9 @@
       
         
   <li>
-    <a class="current" title="manual" href="./">
+    <a class="" title="manual" href="../../referance/manual/">
       manual
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="閱讀文件" href="#_1">
-                閱讀文件
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -239,10 +275,137 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="manual">manual</h1>
-<h2 id="_1">閱讀文件</h2>
+          <h1 id="bash">bash 套件探索</h1>
+<h2 id="_1">下載套件</h2>
+<p>下載「<a href="http://packages.ubuntu.com/trusty/bash">bash</a>」這個套件。</p>
+<pre class="code"><code class="language-sh">$ apt-get download bash</code></pre>
+
+
+<h2 id="_2">解開套件</h2>
+<p>解開「bash_4.3-7ubuntu1.5_amd64.deb」</p>
+<pre class="code"><code>$ dpkg -x bash_4.3-7ubuntu1.5_amd64.deb bash</code></pre>
+
+
+<h2 id="_3">觀看資料夾結構</h2>
+<pre class="code"><code class="language-sh">$ tree bash</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>bash
+├── bin
+│   ├── bash
+│   └── rbash -&gt; bash
+├── etc
+│   ├── bash.bashrc
+│   └── skel
+└── usr
+    ├── bin
+    │   ├── bashbug
+    │   └── clear_console
+    └── share
+        ├── doc
+        │   └── bash
+        │       ├── changelog.Debian.gz
+        │       ├── COMPAT.gz
+        │       ├── copyright
+        │       ├── inputrc.arrows
+        │       ├── INTRO.gz
+        │       ├── NEWS.gz
+        │       ├── POSIX.gz
+        │       ├── RBASH
+        │       ├── README
+        │       ├── README.abs-guide
+        │       ├── README.commands.gz
+        │       └── README.Debian.gz
+        ├── info
+        ├── lintian
+        │   └── overrides
+        │       └── bash
+        ├── man
+        │   ├── man1
+        │   │   ├── bash.1.gz
+        │   │   ├── bashbug.1.gz
+        │   │   ├── clear_console.1.gz
+        │   │   └── rbash.1.gz
+        │   └── man7
+        │       └── bash-builtins.7.gz
+        └── menu
+            └── bash
+
+15 directories, 24 files</code></pre>
+
+
+<p>若有安裝這個套件的話，可執行</p>
+<pre class="code"><code class="language-sh">$ dpkg -L bash</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>/.
+/etc
+/etc/bash.bashrc
+/etc/skel
+/etc/skel/.profile
+/etc/skel/.bash_logout
+/etc/skel/.bashrc
+/bin
+/bin/bash
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/bash
+/usr/share/doc/bash/inputrc.arrows
+/usr/share/doc/bash/POSIX.gz
+/usr/share/doc/bash/changelog.Debian.gz
+/usr/share/doc/bash/README.abs-guide
+/usr/share/doc/bash/RBASH
+/usr/share/doc/bash/INTRO.gz
+/usr/share/doc/bash/COMPAT.gz
+/usr/share/doc/bash/NEWS.gz
+/usr/share/doc/bash/README
+/usr/share/doc/bash/copyright
+/usr/share/doc/bash/README.Debian.gz
+/usr/share/doc/bash/README.commands.gz
+/usr/share/man
+/usr/share/man/man7
+/usr/share/man/man7/bash-builtins.7.gz
+/usr/share/man/man1
+/usr/share/man/man1/bashbug.1.gz
+/usr/share/man/man1/rbash.1.gz
+/usr/share/man/man1/clear_console.1.gz
+/usr/share/man/man1/bash.1.gz
+/usr/share/menu
+/usr/share/menu/bash
+/usr/share/info
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/bash
+/usr/bin
+/usr/bin/bashbug
+/usr/bin/clear_console
+/bin/rbash</code></pre>
+
+
+<h2 id="manpage">manpage</h2>
+<p>顯示</p>
+<pre class="code"><code class="language-sh">$ dpkg -L bash | grep '/man/man.*/'</code></pre>
+
+
+<pre class="code"><code>/usr/share/man/man7/bash-builtins.7.gz
+/usr/share/man/man1/bashbug.1.gz
+/usr/share/man/man1/rbash.1.gz
+/usr/share/man/man1/clear_console.1.gz
+/usr/share/man/man1/bash.1.gz</code></pre>
+
+
 <ul>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/bash-builtins.7.html">bash-builtins</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bashbug.1.html">bashbug</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/rbash.1.html">rbash</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/clear_console.1.html">clear_console</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a></li>
+</ul>
+<h2 id="_4">其他文件</h2>
+<ul>
 <li>$ less /usr/share/doc/bash/INTRO.gz</li>
 <li>$ less /usr/share/doc/bash/POSIX.gz</li>
 <li>$ less /usr/share/doc/bash/README.commands.gz</li>
@@ -251,6 +414,19 @@
 <li>$ lynx /usr/share/doc/bash/bash.html (內容同 $ man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a>)</li>
 <li>$ lynx /usr/share/doc/bash/bashref.html (「<a href="https://www.gnu.org/software/bash/manual/bashref.html">The GNU Bash Reference Manual</a>」)</li>
 <li>$ lynx /usr/share/doc/bash/examples/INDEX.html</li>
+</ul>
+<h2 id="skel">skel 設定檔</h2>
+<ul>
+<li>/etc/skel/.profile</li>
+<li>/etc/skel/.bash_logout</li>
+<li>/etc/skel/.bashrc</li>
+</ul>
+<h2 id="_5">設定檔</h2>
+<ul>
+<li>/etc/bash.bashrc</li>
+<li>~/.bashrc</li>
+<li>~/.profile</li>
+<li>~/.bash_logout</li>
 </ul>
           <aside class="copyright" role="note">
             
@@ -270,7 +446,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../../deb-package/bash/" title="bash">
+        <a href="../" title="index">
           <span class="direction">
             上一頁
           </span>
@@ -280,7 +456,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                bash
+                index
               </div>
             </div>
           </div>
@@ -288,6 +464,22 @@
       
     </div>
     <div class="next">
+      
+        <a href="../../referance/manual/" title="manual">
+          <span class="direction">
+            下一頁
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                manual
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
       
     </div>
   </nav>
