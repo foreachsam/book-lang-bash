@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>bash - GNU Bash 學習筆記</title>
+        <title>bash-doc - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-doc/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-doc/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-doc//../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -97,7 +97,7 @@
             
           </span>
         
-        bash
+        bash-doc
       </div>
     </div>
     
@@ -171,8 +171,17 @@
       
         
   <li>
-    <a class="current" title="bash" href="./">
+    <a class="" title="bash" href="../bash/">
       bash
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="bash-doc" href="./">
+      bash-doc
     </a>
     
       
@@ -200,40 +209,13 @@
             </li>
           
             <li class="anchor">
-              <a title="manpage" href="#manpage">
-                manpage
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="其他文件" href="#_4">
-                其他文件
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="skel 設定檔" href="#skel">
-                skel 設定檔
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="設定檔" href="#_5">
-                設定檔
+              <a title="info" href="#info">
+                info
               </a>
             </li>
           
         </ul>
       
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="bash-doc" href="../bash-doc/">
-      bash-doc
-    </a>
     
   </li>
 
@@ -284,160 +266,202 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="bash">bash 套件探索</h1>
+          <h1 id="bash-doc">bash-doc 套件探索</h1>
 <h2 id="_1">下載套件</h2>
-<p>下載「<a href="http://packages.ubuntu.com/trusty/bash">bash</a>」這個套件。</p>
-<pre class="code"><code class="language-sh">$ apt-get download bash</code></pre>
+<p>下載「<a href="http://packages.ubuntu.com/trusty/bash-doc">bash-doc</a>」這個套件。</p>
+<pre class="code"><code class="language-sh">$ apt-get download bash-doc</code></pre>
 
 
 <h2 id="_2">解開套件</h2>
-<p>解開「bash_4.3-7ubuntu1.5_amd64.deb」</p>
-<pre class="code"><code>$ dpkg -x bash_4.3-7ubuntu1.5_amd64.deb bash</code></pre>
+<p>解開「bash-doc_4.3-7ubuntu1.5_all.deb」</p>
+<pre class="code"><code>$ dpkg -x bash-doc_4.3-7ubuntu1.5_all.deb bash-doc</code></pre>
 
 
 <h2 id="_3">觀看資料夾結構</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ tree bash</code></pre>
+<pre class="code"><code class="language-sh">$ tree bash-doc</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>bash
-├── bin
-│   ├── bash
-│   └── rbash -&gt; bash
-├── etc
-│   ├── bash.bashrc
-│   └── skel
+<pre class="code"><code>bash-doc
 └── usr
-    ├── bin
-    │   ├── bashbug
-    │   └── clear_console
     └── share
         ├── doc
-        │   └── bash
+        │   ├── bash
+        │   │   ├── bash.html
+        │   │   ├── bash.pdf
+        │   │   ├── bashref.html
+        │   │   ├── bashref.pdf
+        │   │   └── examples
+        │   │       ├── complete
+        │   │       │   ├── bashcc-1.0.1.tar.gz
+        │   │       │   ├── bash_completion
+        │   │       │   ├── cdfunc
+        │   │       │   └── complete-examples
+        │   │       ├── functions
+        │   │       │   ├── array-stuff
+        │   │       │   ├── array-to-string
+        │   │       │   ├── autoload
+        │   │       │   ├── autoload.v2
+        │   │       │   ├── autoload.v3
+        │   │       │   ├── basename
+        │   │       │   ├── csh-compat
+        │   │       │   ├── dirname
+        │   │       │   ├── exitstat
+        │   │       │   ├── external
+        │   │       │   ├── fact
+        │   │       │   ├── fstty
+        │   │       │   ├── func
+        │   │       │   ├── inetaddr
+        │   │       │   ├── inpath
+        │   │       │   ├── isnum2
+        │   │       │   ├── isvalidip
+        │   │       │   ├── ksh-cd
+        │   │       │   ├── ksh-compat-test
+        │   │       │   ├── kshenv
+        │   │       │   ├── login
+        │   │       │   ├── notify.bash
+        │   │       │   ├── seq
+        │   │       │   ├── seq2
+        │   │       │   ├── shcat
+        │   │       │   ├── shcat2
+        │   │       │   ├── sort-pos-params
+        │   │       │   ├── substr
+        │   │       │   ├── substr2
+        │   │       │   ├── whatis
+        │   │       │   ├── whence
+        │   │       │   └── which
+        │   │       ├── INDEX.html
+        │   │       ├── INDEX.txt
+        │   │       ├── misc
+        │   │       │   ├── aliasconv.bash
+        │   │       │   ├── aliasconv.sh
+        │   │       │   └── cshtobash
+        │   │       ├── scripts
+        │   │       │   ├── cat.sh
+        │   │       │   ├── center
+        │   │       │   ├── inpath
+        │   │       │   ├── shprompt
+        │   │       │   ├── spin.bash
+        │   │       │   ├── xterm_title
+        │   │       │   └── zprintf
+        │   │       └── startup-files
+        │   │           ├── Bash_aliases
+        │   │           ├── bash-profile
+        │   │           ├── Bash_profile
+        │   │           ├── bashrc
+        │   │           ├── Bashrc.bfox
+        │   │           └── README
+        │   └── bash-doc
+        │       ├── bash.html -&gt; ../bash/bash.html
+        │       ├── bash.pdf -&gt; ../bash/bash.pdf
+        │       ├── bashref.html -&gt; ../bash/bashref.html
+        │       ├── bashref.pdf -&gt; ../bash/bashref.pdf
         │       ├── changelog.Debian.gz
-        │       ├── COMPAT.gz
         │       ├── copyright
-        │       ├── inputrc.arrows
-        │       ├── INTRO.gz
-        │       ├── NEWS.gz
-        │       ├── POSIX.gz
-        │       ├── RBASH
-        │       ├── README
-        │       ├── README.abs-guide
-        │       ├── README.commands.gz
-        │       └── README.Debian.gz
-        ├── info
-        ├── lintian
-        │   └── overrides
-        │       └── bash
-        ├── man
-        │   ├── man1
-        │   │   ├── bash.1.gz
-        │   │   ├── bashbug.1.gz
-        │   │   ├── clear_console.1.gz
-        │   │   └── rbash.1.gz
-        │   └── man7
-        │       └── bash-builtins.7.gz
-        └── menu
-            └── bash
+        │       └── examples -&gt; ../bash/examples
+        ├── doc-base
+        │   ├── bash
+        │   └── bashref
+        └── info
+            └── bash.info.gz
 
-15 directories, 24 files</code></pre>
+14 directories, 67 files</code></pre>
 
 
 <p>若有安裝這個套件的話，可執行</p>
-<pre class="code"><code class="language-sh">$ dpkg -L bash</code></pre>
+<pre class="code"><code class="language-sh">$ dpkg -L bash-doc</code></pre>
 
 
 <p>顯示</p>
 <pre class="code"><code>/.
-/etc
-/etc/bash.bashrc
-/etc/skel
-/etc/skel/.profile
-/etc/skel/.bash_logout
-/etc/skel/.bashrc
-/bin
-/bin/bash
 /usr
 /usr/share
 /usr/share/doc
+/usr/share/doc/bash-doc
+/usr/share/doc/bash-doc/changelog.Debian.gz
+/usr/share/doc/bash-doc/copyright
 /usr/share/doc/bash
-/usr/share/doc/bash/inputrc.arrows
-/usr/share/doc/bash/POSIX.gz
-/usr/share/doc/bash/changelog.Debian.gz
-/usr/share/doc/bash/README.abs-guide
-/usr/share/doc/bash/RBASH
-/usr/share/doc/bash/INTRO.gz
-/usr/share/doc/bash/COMPAT.gz
-/usr/share/doc/bash/NEWS.gz
-/usr/share/doc/bash/README
-/usr/share/doc/bash/copyright
-/usr/share/doc/bash/README.Debian.gz
-/usr/share/doc/bash/README.commands.gz
-/usr/share/man
-/usr/share/man/man7
-/usr/share/man/man7/bash-builtins.7.gz
-/usr/share/man/man1
-/usr/share/man/man1/bashbug.1.gz
-/usr/share/man/man1/rbash.1.gz
-/usr/share/man/man1/clear_console.1.gz
-/usr/share/man/man1/bash.1.gz
-/usr/share/menu
-/usr/share/menu/bash
+/usr/share/doc/bash/bashref.pdf
+/usr/share/doc/bash/bashref.html
+/usr/share/doc/bash/examples
+/usr/share/doc/bash/examples/scripts
+/usr/share/doc/bash/examples/scripts/zprintf
+/usr/share/doc/bash/examples/scripts/inpath
+/usr/share/doc/bash/examples/scripts/center
+/usr/share/doc/bash/examples/scripts/xterm_title
+/usr/share/doc/bash/examples/scripts/spin.bash
+/usr/share/doc/bash/examples/scripts/shprompt
+/usr/share/doc/bash/examples/scripts/cat.sh
+/usr/share/doc/bash/examples/functions
+/usr/share/doc/bash/examples/functions/fstty
+/usr/share/doc/bash/examples/functions/seq2
+/usr/share/doc/bash/examples/functions/shcat2
+/usr/share/doc/bash/examples/functions/ksh-cd
+/usr/share/doc/bash/examples/functions/array-to-string
+/usr/share/doc/bash/examples/functions/exitstat
+/usr/share/doc/bash/examples/functions/sort-pos-params
+/usr/share/doc/bash/examples/functions/autoload.v3
+/usr/share/doc/bash/examples/functions/seq
+/usr/share/doc/bash/examples/functions/dirname
+/usr/share/doc/bash/examples/functions/autoload
+/usr/share/doc/bash/examples/functions/basename
+/usr/share/doc/bash/examples/functions/whatis
+/usr/share/doc/bash/examples/functions/shcat
+/usr/share/doc/bash/examples/functions/kshenv
+/usr/share/doc/bash/examples/functions/notify.bash
+/usr/share/doc/bash/examples/functions/inpath
+/usr/share/doc/bash/examples/functions/csh-compat
+/usr/share/doc/bash/examples/functions/fact
+/usr/share/doc/bash/examples/functions/whence
+/usr/share/doc/bash/examples/functions/login
+/usr/share/doc/bash/examples/functions/autoload.v2
+/usr/share/doc/bash/examples/functions/external
+/usr/share/doc/bash/examples/functions/ksh-compat-test
+/usr/share/doc/bash/examples/functions/substr2
+/usr/share/doc/bash/examples/functions/inetaddr
+/usr/share/doc/bash/examples/functions/array-stuff
+/usr/share/doc/bash/examples/functions/which
+/usr/share/doc/bash/examples/functions/substr
+/usr/share/doc/bash/examples/functions/func
+/usr/share/doc/bash/examples/functions/isnum2
+/usr/share/doc/bash/examples/functions/isvalidip
+/usr/share/doc/bash/examples/complete
+/usr/share/doc/bash/examples/complete/bash_completion
+/usr/share/doc/bash/examples/complete/complete-examples
+/usr/share/doc/bash/examples/complete/bashcc-1.0.1.tar.gz
+/usr/share/doc/bash/examples/complete/cdfunc
+/usr/share/doc/bash/examples/misc
+/usr/share/doc/bash/examples/misc/cshtobash
+/usr/share/doc/bash/examples/misc/aliasconv.sh
+/usr/share/doc/bash/examples/misc/aliasconv.bash
+/usr/share/doc/bash/examples/startup-files
+/usr/share/doc/bash/examples/startup-files/bashrc
+/usr/share/doc/bash/examples/startup-files/README
+/usr/share/doc/bash/examples/startup-files/Bash_aliases
+/usr/share/doc/bash/examples/startup-files/bash-profile
+/usr/share/doc/bash/examples/startup-files/Bash_profile
+/usr/share/doc/bash/examples/startup-files/Bashrc.bfox
+/usr/share/doc/bash/examples/INDEX.txt
+/usr/share/doc/bash/examples/INDEX.html
+/usr/share/doc/bash/bash.html
+/usr/share/doc/bash/bash.pdf
+/usr/share/doc-base
+/usr/share/doc-base/bashref
+/usr/share/doc-base/bash
 /usr/share/info
-/usr/share/lintian
-/usr/share/lintian/overrides
-/usr/share/lintian/overrides/bash
-/usr/bin
-/usr/bin/bashbug
-/usr/bin/clear_console
-/bin/rbash</code></pre>
+/usr/share/info/bash.info.gz
+/usr/share/doc/bash-doc/bashref.pdf
+/usr/share/doc/bash-doc/bashref.html
+/usr/share/doc/bash-doc/examples
+/usr/share/doc/bash-doc/bash.html
+/usr/share/doc/bash-doc/bash.pdf</code></pre>
 
 
-<h2 id="manpage">manpage</h2>
-<p>顯示</p>
-<pre class="code"><code class="language-sh">$ dpkg -L bash | grep '/man/man.*/'</code></pre>
-
-
-<pre class="code"><code>/usr/share/man/man7/bash-builtins.7.gz
-/usr/share/man/man1/bashbug.1.gz
-/usr/share/man/man1/rbash.1.gz
-/usr/share/man/man1/clear_console.1.gz
-/usr/share/man/man1/bash.1.gz</code></pre>
-
-
-<ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/bash-builtins.7.html">bash-builtins</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bashbug.1.html">bashbug</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/rbash.1.html">rbash</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/clear_console.1.html">clear_console</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a></li>
-</ul>
-<h2 id="_4">其他文件</h2>
-<ul>
-<li>$ less /usr/share/doc/bash/INTRO.gz</li>
-<li>$ less /usr/share/doc/bash/POSIX.gz</li>
-<li>$ less /usr/share/doc/bash/README.commands.gz</li>
-<li>$ less /usr/share/doc/bash/README.bash_completion.gz</li>
-<li>$ less /usr/share/doc/bash/README.abs-guide (<a href="http://tldp.org/LDP/abs/html/">Advanced Bash-Scripting Guide</a>)</li>
-<li>$ lynx /usr/share/doc/bash/bash.html (內容同 $ man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a>)</li>
-<li>$ lynx /usr/share/doc/bash/bashref.html (「<a href="https://www.gnu.org/software/bash/manual/bashref.html">The GNU Bash Reference Manual</a>」)</li>
-<li>$ lynx /usr/share/doc/bash/examples/INDEX.html</li>
-</ul>
-<h2 id="skel">skel 設定檔</h2>
-<ul>
-<li>/etc/skel/.profile</li>
-<li>/etc/skel/.bash_logout</li>
-<li>/etc/skel/.bashrc</li>
-</ul>
-<h2 id="_5">設定檔</h2>
-<ul>
-<li>/etc/bash.bashrc</li>
-<li>~/.bashrc</li>
-<li>~/.profile</li>
-<li>~/.bash_logout</li>
-</ul>
+<h2 id="info">info</h2>
+<p>因為有「/usr/share/info/bash.info.gz」這個檔</p>
+<p>所以可以執行下面的指令閱讀info文件。</p>
+<pre class="code"><code>$ info bash</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -456,7 +480,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../" title="index">
+        <a href="../bash/" title="bash">
           <span class="direction">
             上一頁
           </span>
@@ -466,7 +490,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                index
+                bash
               </div>
             </div>
           </div>
@@ -475,14 +499,14 @@
     </div>
     <div class="next">
       
-        <a href="../bash-doc/" title="bash-doc">
+        <a href="../../referance/manual/" title="manual">
           <span class="direction">
             下一頁
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                bash-doc
+                manual
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
