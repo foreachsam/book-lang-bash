@@ -29,6 +29,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-completion/</loc>
+     <lastmod>2016-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
