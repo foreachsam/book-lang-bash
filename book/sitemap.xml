@@ -4,44 +4,54 @@
     
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/</loc>
-     <lastmod>2016-03-30</lastmod>
+     <lastmod>2016-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
-    <url>
-     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/</loc>
-     <lastmod>2016-03-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash/</loc>
-     <lastmod>2016-03-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-doc/</loc>
-     <lastmod>2016-03-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-completion/</loc>
-     <lastmod>2016-03-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/referance/manual/</loc>
-     <lastmod>2016-03-30</lastmod>
+     <lastmod>2016-04-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/</loc>
+     <lastmod>2016-04-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash/</loc>
+     <lastmod>2016-04-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-doc/</loc>
+     <lastmod>2016-04-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-completion/</loc>
+     <lastmod>2016-04-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/command/bash/</loc>
+     <lastmod>2016-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
