@@ -77,6 +77,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/false/</loc>
+     <lastmod>2016-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
