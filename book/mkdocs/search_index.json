@@ -209,6 +209,31 @@
             "location": "/content/help/#help-help",
             "text": "\u57f7\u884c  $ help help  \u986f\u793a  help: help [-dms] [pattern ...]\n    Display information about builtin commands.\n\n    Displays brief summaries of builtin commands.  If PATTERN is\n    specified, gives detailed help on all commands matching PATTERN,\n    otherwise the list of help topics is printed.\n\n    Options:\n      -d        output short description for each topic\n      -m        display usage in pseudo-manpage format\n      -s        output only a short usage synopsis for each topic matching\n        PATTERN\n\n    Arguments:\n      PATTERN   Pattern specifiying a help topic\n\n    Exit Status:\n    Returns success unless PATTERN is not found or an invalid option is given.",
             "title": "help help"
+        },
+        {
+            "location": "/content/help/colon/",
+            "text": "Command \u300c:\u300d\n\n\ntype :\n\n\n$ type :\n\n\n\n\n\u986f\u793a\n\n\n: is a shell builtin\n\n\n\n\nhelp :\n\n\n\u57f7\u884c\n\n\n$ help :\n\n\n\n\n\u986f\u793a\n\n\n:: :\n    Null command.\n\n    No effect; the command does nothing.\n\n    Exit Status:\n    Always succeeds.\n\n\n\n\nExit Status\n\n\n\u57f7\u884c\n\n\n$ :\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ echo @?\n\n\n\n\n\u986f\u793a\n\n\n0",
+            "title": ":"
+        },
+        {
+            "location": "/content/help/colon/#command",
+            "text": "",
+            "title": "Command \u300c:\u300d"
+        },
+        {
+            "location": "/content/help/colon/#type",
+            "text": "$ type :  \u986f\u793a  : is a shell builtin",
+            "title": "type :"
+        },
+        {
+            "location": "/content/help/colon/#help",
+            "text": "\u57f7\u884c  $ help :  \u986f\u793a  :: :\n    Null command.\n\n    No effect; the command does nothing.\n\n    Exit Status:\n    Always succeeds.",
+            "title": "help :"
+        },
+        {
+            "location": "/content/help/colon/#exit-status",
+            "text": "\u57f7\u884c  $ :  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ echo @?  \u986f\u793a  0",
+            "title": "Exit Status"
         }
     ]
 }
