@@ -322,7 +322,7 @@
         },
         {
             "location": "/content/help/exit/",
-            "text": "Shell Builtin Command \u300cexit\u300d\n\n\ntype exit\n\n\n\u57f7\u884c\n\n\n$ type exit\n\n\n\n\n\u986f\u793a\n\n\nexit is a shell builtin\n\n\n\n\nhelp exit\n\n\n\u57f7\u884c\n\n\n$ help exit\n\n\n\n\n\u986f\u793a\n\n\nexit: exit [n]\n    Exit the shell.\n\n    Exits the shell with a status of N.  If N is omitted, the exit status\n    is that of the last command executed.\n\n\n\n\nExit Status\n\n\nexit 0\n\n\nexit_0.sh\n\n\n#!/usr/bin/env bash\n\nexit 0\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./exit_0.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./exit_0.sh\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ exit $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\nexit 1\n\n\nexit_1.sh\n\n\n#!/usr/bin/env bash\n\nexit 1\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./exit_1.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./exit_1.sh\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ exit $?\n\n\n\n\n\u986f\u793a\n\n\n1\n\n\n\n\nexit\n\n\nexit.sh\n\n\n#!/usr/bin/env bash\n\nexit\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./exit.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./exit.sh\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ exit $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\nexit last\n\n\nexit_last.sh\n\n\n#!/usr/bin/env bash\n\nfalse\n\nexit\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./exit_last.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./exit_last.sh\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ exit $?\n\n\n\n\n\u986f\u793a\n\n\n1",
+            "text": "Shell Builtin Command \u300cexit\u300d\n\n\ntype exit\n\n\n\u57f7\u884c\n\n\n$ type exit\n\n\n\n\n\u986f\u793a\n\n\nexit is a shell builtin\n\n\n\n\nhelp exit\n\n\n\u57f7\u884c\n\n\n$ help exit\n\n\n\n\n\u986f\u793a\n\n\nexit: exit [n]\n    Exit the shell.\n\n    Exits the shell with a status of N.  If N is omitted, the exit status\n    is that of the last command executed.\n\n\n\n\nExit Status\n\n\nexit 0\n\n\nexit_0.sh\n\n\n#!/usr/bin/env bash\n\nexit 0\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./exit_0.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./exit_0.sh\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\nexit 1\n\n\nexit_1.sh\n\n\n#!/usr/bin/env bash\n\nexit 1\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./exit_1.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./exit_1.sh\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1\n\n\n\n\nexit\n\n\nexit.sh\n\n\n#!/usr/bin/env bash\n\nexit\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./exit.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./exit.sh\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\nexit last\n\n\nexit_last.sh\n\n\n#!/usr/bin/env bash\n\nfalse\n\nexit\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./exit_last.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./exit_last.sh\n\n\n\n\n\u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1",
             "title": "exit"
         },
         {
@@ -347,23 +347,68 @@
         },
         {
             "location": "/content/help/exit/#exit-0",
-            "text": "exit_0.sh  #!/usr/bin/env bash\n\nexit 0  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./exit_0.sh  \u57f7\u884c  $ ./exit_0.sh  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ exit $?  \u986f\u793a  0",
+            "text": "exit_0.sh  #!/usr/bin/env bash\n\nexit 0  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./exit_0.sh  \u57f7\u884c  $ ./exit_0.sh  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  0",
             "title": "exit 0"
         },
         {
             "location": "/content/help/exit/#exit-1",
-            "text": "exit_1.sh  #!/usr/bin/env bash\n\nexit 1  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./exit_1.sh  \u57f7\u884c  $ ./exit_1.sh  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ exit $?  \u986f\u793a  1",
+            "text": "exit_1.sh  #!/usr/bin/env bash\n\nexit 1  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./exit_1.sh  \u57f7\u884c  $ ./exit_1.sh  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  1",
             "title": "exit 1"
         },
         {
             "location": "/content/help/exit/#exit",
-            "text": "exit.sh  #!/usr/bin/env bash\n\nexit  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./exit.sh  \u57f7\u884c  $ ./exit.sh  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ exit $?  \u986f\u793a  0",
+            "text": "exit.sh  #!/usr/bin/env bash\n\nexit  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./exit.sh  \u57f7\u884c  $ ./exit.sh  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  0",
             "title": "exit"
         },
         {
             "location": "/content/help/exit/#exit-last",
-            "text": "exit_last.sh  #!/usr/bin/env bash\n\nfalse\n\nexit  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./exit_last.sh  \u57f7\u884c  $ ./exit_last.sh  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ exit $?  \u986f\u793a  1",
+            "text": "exit_last.sh  #!/usr/bin/env bash\n\nfalse\n\nexit  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./exit_last.sh  \u57f7\u884c  $ ./exit_last.sh  \u6c92\u6709\u4efb\u4f55\u986f\u793a\uff0c\u76f4\u63a5\u63db\u4e0b\u4e00\u500b\u63d0\u793a\u5b57\u5143  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  1",
             "title": "exit last"
+        },
+        {
+            "location": "/content/help/return/",
+            "text": "Shell Builtin Command \u300creturn\u300d\n\n\ntype return\n\n\n\u57f7\u884c\n\n\n$ type return\n\n\n\n\n\u986f\u793a\n\n\nreturn is a shell builtin\n\n\n\n\nhelp return\n\n\n\u57f7\u884c\n\n\n$ help return\n\n\n\n\n\u986f\u793a\n\n\nreturn: return [n]\n    Return from a shell function.\n\n    Causes a function or sourced script to exit with the return value\n    specified by N.  If N is omitted, the return status is that of the\n    last command executed within the function or script.\n\n    Exit Status:\n    Returns N, or failure if the shell is not executing a function or script.\n\n\n\n\nExit Status\n\n\ninteractive\n\n\n\u57f7\u884c\n\n\n$ return\n\n\n\n\n\u986f\u793a\n\n\nbash: return: can only `return' from a function or sourced script\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1\n\n\n\n\nscript return\n\n\nscript_return.sh\n\n\n#!/usr/bin/env bash\n\nreturn 3;\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./script_return.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./script_return.sh\n\n\n\n\n\u986f\u793a\n\n\n./script_return.sh: line 3: return: can only `return' from a function or sourced script\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1\n\n\n\n\nsource return\n\n\nsource_return.sh\n\n\nreturn 3;\n\n\n\n\ncall_source.sh\n\n\n#!/usr/bin/env bash\n\nsource source_return.sh\n# . source_return.sh\n\necho $?\n\n\n\n\n\u300ccall_source.sh\u300d\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./call_source.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./call_source.sh\n\n\n\n\n\u986f\u793a\n\n\n3\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\nfunction return\n\n\nfunction_return.sh\n\n\n#!/usr/bin/env bash\n\nfunction_return () {\n    return 3;\n}\n\nfunction_return\n\necho $?\n\n\n\n\n\u8a2d\u70ba\u53ef\u57f7\u884c\n\n\n$ chmod u+x ./function_return.sh\n\n\n\n\n\u57f7\u884c\n\n\n$ ./function_return.sh\n\n\n\n\n\u986f\u793a\n\n\n3\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0",
+            "title": "return"
+        },
+        {
+            "location": "/content/help/return/#shell-builtin-command-return",
+            "text": "",
+            "title": "Shell Builtin Command \u300creturn\u300d"
+        },
+        {
+            "location": "/content/help/return/#type-return",
+            "text": "\u57f7\u884c  $ type return  \u986f\u793a  return is a shell builtin",
+            "title": "type return"
+        },
+        {
+            "location": "/content/help/return/#help-return",
+            "text": "\u57f7\u884c  $ help return  \u986f\u793a  return: return [n]\n    Return from a shell function.\n\n    Causes a function or sourced script to exit with the return value\n    specified by N.  If N is omitted, the return status is that of the\n    last command executed within the function or script.\n\n    Exit Status:\n    Returns N, or failure if the shell is not executing a function or script.",
+            "title": "help return"
+        },
+        {
+            "location": "/content/help/return/#exit-status",
+            "text": "",
+            "title": "Exit Status"
+        },
+        {
+            "location": "/content/help/return/#interactive",
+            "text": "\u57f7\u884c  $ return  \u986f\u793a  bash: return: can only `return' from a function or sourced script  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  1",
+            "title": "interactive"
+        },
+        {
+            "location": "/content/help/return/#script-return",
+            "text": "script_return.sh  #!/usr/bin/env bash\n\nreturn 3;  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./script_return.sh  \u57f7\u884c  $ ./script_return.sh  \u986f\u793a  ./script_return.sh: line 3: return: can only `return' from a function or sourced script  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  1",
+            "title": "script return"
+        },
+        {
+            "location": "/content/help/return/#source-return",
+            "text": "source_return.sh  return 3;  call_source.sh  #!/usr/bin/env bash\n\nsource source_return.sh\n# . source_return.sh\n\necho $?  \u300ccall_source.sh\u300d\u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./call_source.sh  \u57f7\u884c  $ ./call_source.sh  \u986f\u793a  3  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  0",
+            "title": "source return"
+        },
+        {
+            "location": "/content/help/return/#function-return",
+            "text": "function_return.sh  #!/usr/bin/env bash\n\nfunction_return () {\n    return 3;\n}\n\nfunction_return\n\necho $?  \u8a2d\u70ba\u53ef\u57f7\u884c  $ chmod u+x ./function_return.sh  \u57f7\u884c  $ ./function_return.sh  \u986f\u793a  3  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  0",
+            "title": "function return"
         }
     ]
 }
