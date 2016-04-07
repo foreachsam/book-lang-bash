@@ -60,22 +60,6 @@
     
         
     <url>
-     <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/concept/</loc>
-     <lastmod>2016-04-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/doc/</loc>
-     <lastmod>2016-04-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/</loc>
      <lastmod>2016-04-07</lastmod>
      <changefreq>daily</changefreq>
@@ -113,6 +97,22 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/return/</loc>
+     <lastmod>2016-04-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/concept/</loc>
+     <lastmod>2016-04-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/doc/</loc>
      <lastmod>2016-04-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
