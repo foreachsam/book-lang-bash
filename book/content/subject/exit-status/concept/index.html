@@ -9,45 +9,45 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>index - GNU Bash 學習筆記</title>
+        <title>concept - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/concept/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/deb-package/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/concept/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/deb-package//../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/concept//../../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../../../assets/images/favicon-e565ddfa3b.ico">
     <style>
       @font-face {
       	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+      	src: url('../../../../assets/fonts/icon.eot?52m981');
+      	src: url('../../../../assets/fonts/icon.eot?#iefix52m981')
                format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
+      		   url('../../../../assets/fonts/icon.woff?52m981')
                format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
+      		   url('../../../../assets/fonts/icon.ttf?52m981')
                format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
+      		   url('../../../../assets/fonts/icon.svg?52m981#icon')
                format('svg');
       	font-weight: normal;
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-b64b728552.css">
+    <link rel="stylesheet" href="../../../../assets/stylesheets/application-b64b728552.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/palettes-05ab2406df.css">
     
     
       
@@ -64,7 +64,7 @@
       </style>
     
     
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    <script src="../../../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
     
   </head>
   
@@ -92,12 +92,12 @@
           <span class="path">
             
               
-                deb package <i class="icon icon-link"></i>
+                exit status <i class="icon icon-link"></i>
               
             
           </span>
         
-        index
+        concept
       </div>
     </div>
     
@@ -148,7 +148,7 @@
           
             
   <li>
-    <a class="" title="首頁" href="../..">
+    <a class="" title="首頁" href="../../../..">
       首頁
     </a>
     
@@ -162,7 +162,7 @@
       
         
   <li>
-    <a class="" title="manual" href="../referance/manual/">
+    <a class="" title="manual" href="../../../referance/manual/">
       manual
     </a>
     
@@ -180,31 +180,16 @@
       
         
   <li>
-    <a class="current" title="index" href="./">
+    <a class="" title="index" href="../../../deb-package/">
       index
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="套件連結" href="#_1">
-                套件連結
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
       
         
   <li>
-    <a class="" title="bash" href="bash/">
+    <a class="" title="bash" href="../../../deb-package/bash/">
       bash
     </a>
     
@@ -213,7 +198,7 @@
       
         
   <li>
-    <a class="" title="bash-doc" href="bash-doc/">
+    <a class="" title="bash-doc" href="../../../deb-package/bash-doc/">
       bash-doc
     </a>
     
@@ -222,7 +207,7 @@
       
         
   <li>
-    <a class="" title="bash-completion" href="bash-completion/">
+    <a class="" title="bash-completion" href="../../../deb-package/bash-completion/">
       bash-completion
     </a>
     
@@ -240,7 +225,7 @@
       
         
   <li>
-    <a class="" title="bash" href="../command/bash/">
+    <a class="" title="bash" href="../../../command/bash/">
       bash
     </a>
     
@@ -258,16 +243,43 @@
       
         
   <li>
-    <a class="" title="concept" href="../subject/exit-status/concept/">
+    <a class="current" title="concept" href="./">
       concept
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="$?" href="#_1">
+                $?
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="exit" href="#exit">
+                exit
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="return" href="#return">
+                return
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
       
         
   <li>
-    <a class="" title="doc" href="../subject/exit-status/doc/">
+    <a class="" title="doc" href="../doc/">
       doc
     </a>
     
@@ -285,7 +297,7 @@
       
         
   <li>
-    <a class="" title="index" href="../help/">
+    <a class="" title="index" href="../../../help/">
       index
     </a>
     
@@ -294,7 +306,7 @@
       
         
   <li>
-    <a class="" title=":" href="../help/colon/">
+    <a class="" title=":" href="../../../help/colon/">
       :
     </a>
     
@@ -303,7 +315,7 @@
       
         
   <li>
-    <a class="" title="true" href="../help/true/">
+    <a class="" title="true" href="../../../help/true/">
       true
     </a>
     
@@ -312,7 +324,7 @@
       
         
   <li>
-    <a class="" title="false" href="../help/false/">
+    <a class="" title="false" href="../../../help/false/">
       false
     </a>
     
@@ -321,7 +333,7 @@
       
         
   <li>
-    <a class="" title="echo" href="../help/echo/">
+    <a class="" title="echo" href="../../../help/echo/">
       echo
     </a>
     
@@ -330,7 +342,7 @@
       
         
   <li>
-    <a class="" title="exit" href="../help/exit/">
+    <a class="" title="exit" href="../../../help/exit/">
       exit
     </a>
     
@@ -339,7 +351,7 @@
       
         
   <li>
-    <a class="" title="return" href="../help/return/">
+    <a class="" title="return" href="../../../help/return/">
       return
     </a>
     
@@ -374,37 +386,67 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="bash-deb-package">bash deb package</h1>
+          <h1 id="exit-status">Exit Status</h1>
+<h2 id="_1">$?</h2>
+<h3 id="ex">ex</h3>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ dpkg --get-selections | grep bash</code></pre>
+<pre class="code"><code class="language-sh">$ true</code></pre>
+
+
+<p>接著執行</p>
+<pre class="code"><code class="language-sh">$ echo $?</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>bash                                            install
-bash-completion                                 install
-bash-doc                                        install</code></pre>
+<pre class="code"><code>0</code></pre>
 
 
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ dpkg -l *bash*</code></pre>
+<pre class="code"><code class="language-sh">$ false</code></pre>
+
+
+<p>接著執行</p>
+<pre class="code"><code class="language-sh">$ echo $?</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>Desired=Unknown/Install/Remove/Purge/Hold
-| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
-|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-||/ Name                                        Version                                             Architecture Description
-+++-===========================================-===================================================-============-===============================================================================
-ii  bash                                        4.3-7ubuntu1.5                                      amd64        GNU Bourne Again SHell
-ii  bash-completion                             1:2.1-4ubuntu0.1                                    all          programmable completion for the bash shell
-ii  bash-doc                                    4.3-7ubuntu1.5                                      all          Documentation and examples for the The GNU Bourne Again SHell</code></pre>
+<pre class="code"><code>1</code></pre>
 
 
-<h2 id="_1">套件連結</h2>
+<h3 id="doc">doc</h3>
+<p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a></p>
+<p>可以找到下面這一段說明</p>
+<pre class="code"><code>Special Parameters
+    The shell treats several parameters specially.  These parameters may only be referenced; assignment to them  is
+    not allowed.
+...略...
+    ?      Expands to the exit status of the most recently executed foreground pipeline.
+
+...略...</code></pre>
+
+
+<p>或是在</p>
+<p>Bash Reference Manual / 3 Basic Shell Features / 3.4 Shell Parameters / <a href="https://www.gnu.org/software/bash/manual/bashref.html#Special-Parameters">3.4.2 Special Parameters</a></p>
+<p>可以找到下面這一段說明</p>
+<pre class="code"><code>?
+
+    ($?) Expands to the exit status of the most recently executed foreground pipeline.</code></pre>
+
+
+<p>更多範例和說明請參考</p>
 <ul>
-<li><a href="http://packages.ubuntu.com/trusty/bash">bash</a></li>
-<li><a href="http://packages.ubuntu.com/trusty/bash-doc">bash-doc</a></li>
-<li><a href="http://packages.ubuntu.com/trusty/bash-completion">bash-completion</a></li>
+<li>help <a href="../../../../book-lang-bash/content/help/colon/">:</a></li>
+<li>help <a href="../../../../book-lang-bash/content/help/true/">true</a></li>
+<li>help <a href="../../../../book-lang-bash/content/help/false/">false</a></li>
+<li>help <a href="../../../../book-lang-bash/content/help/echo/">echo</a></li>
+</ul>
+<h2 id="exit">exit</h2>
+<ul>
+<li>help <a href="../../../../book-lang-bash/content/help/exit/">exit</a></li>
+</ul>
+<h2 id="return">return</h2>
+<ul>
+<li>help <a href="../../../../book-lang-bash/content/help/return/">return</a></li>
 </ul>
           <aside class="copyright" role="note">
             
@@ -424,7 +466,7 @@ ii  bash-doc                                    4.3-7ubuntu1.5                  
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../referance/manual/" title="manual">
+        <a href="../../../command/bash/" title="bash">
           <span class="direction">
             上一頁
           </span>
@@ -434,7 +476,7 @@ ii  bash-doc                                    4.3-7ubuntu1.5                  
             </div>
             <div class="stretch">
               <div class="title">
-                manual
+                bash
               </div>
             </div>
           </div>
@@ -443,14 +485,14 @@ ii  bash-doc                                    4.3-7ubuntu1.5                  
     </div>
     <div class="next">
       
-        <a href="bash/" title="bash">
+        <a href="../doc/" title="doc">
           <span class="direction">
             下一頁
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                bash
+                doc
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
@@ -475,10 +517,10 @@ ii  bash-doc                                    4.3-7ubuntu1.5                  
       </div>
     </main>
     <script>
-      var base_url = '../..';
+      var base_url = '../../../..';
       var repo_id  = '';
     </script>
-    <script src="../../assets/javascripts/application-a10a824a49.js"></script>
+    <script src="../../../../assets/javascripts/application-a10a824a49.js"></script>
     
     
       <script>
