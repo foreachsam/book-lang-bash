@@ -412,6 +412,15 @@
   </li>
 
       
+        
+  <li>
+    <a class="" title="--" href="../option_end_flag/">
+      --
+    </a>
+    
+  </li>
+
+      
     </ul>
   </li>
 
@@ -551,6 +560,39 @@ ${15}: o</code></pre>
 
     When  a  positional parameter consisting of more than a single digit is expanded, it must be enclosed in braces
     (see EXPANSION below).</code></pre>
+
+
+<p>可以看到下面一段說明</p>
+<pre class="code"><code>Special Parameters
+    The shell treats several parameters specially.  These parameters may only be referenced; assignment to them  is
+    not allowed.
+...略...
+    0      Expands  to  the  name  of  the shell or shell script.  This is set at shell initialization.  If bash is
+           invoked with a file of commands, $0 is set to the name of that file.  If bash is  started  with  the  -c
+           option, then $0 is set to the first argument after the string to be executed, if one is present.  Other‐
+           wise, it is set to the filename used to invoke bash, as given by argument zero.</code></pre>
+
+
+<p>可以看到下面一段說明</p>
+<pre class="code"><code>ARGUMENTS
+       If arguments remain after option processing, and neither the -c nor the -s option has been supplied, the  first
+       argument is assumed to be the name of a file containing shell commands.  If bash is invoked in this fashion, $0
+       is set to the name of the file, and the positional parameters are set to the remaining arguments.   Bash  reads
+       and  executes  commands  from this file, then exits.  Bash's exit status is the exit status of the last command
+       executed in the script.  If no commands are executed, the exit status is 0.  An attempt is first made  to  open
+       the  file  in  the current directory, and, if no file is found, then the shell searches the directories in PATH
+       for the script.</code></pre>
+
+
+<p>可以看到下面一段說明</p>
+<pre class="code"><code>FUNCTIONS
+       A shell function, defined as described above under SHELL GRAMMAR, stores a series of commands for later  execu‐
+       tion.  When the name of a shell function is used as a simple command name, the list of commands associated with
+       that function name is executed.  Functions are executed in the context of the current shell; no new process  is
+       created  to  interpret them (contrast this with the execution of a shell script).  When a function is executed,
+       the arguments to the function become the positional parameters during its execution.  The special  parameter  #
+       is  updated  to reflect the change.  Special parameter 0 is unchanged.  The first element of the FUNCNAME vari‐
+       able is set to the name of the function while the function is executing.</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;

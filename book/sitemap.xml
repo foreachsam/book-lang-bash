@@ -151,6 +151,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/option_end_flag/</loc>
+     <lastmod>2016-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
