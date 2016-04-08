@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>doc - GNU Bash 學習筆記</title>
+        <title>set positional parameters - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/doc/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/set_positional_parameters/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/doc/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/set_positional_parameters/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/doc//../../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/set_positional_parameters//../../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -92,12 +92,12 @@
           <span class="path">
             
               
-                exit status <i class="icon icon-link"></i>
+                arguments <i class="icon icon-link"></i>
               
             
           </span>
         
-        doc
+        set positional parameters
       </div>
     </div>
     
@@ -315,7 +315,7 @@
       
         
   <li>
-    <a class="" title="$?" href="../special_parameters/">
+    <a class="" title="$?" href="../../exit-status/special_parameters/">
       $?
     </a>
     
@@ -324,7 +324,7 @@
       
         
   <li>
-    <a class="" title="exit" href="../exit/">
+    <a class="" title="exit" href="../../exit-status/exit/">
       exit
     </a>
     
@@ -333,7 +333,7 @@
       
         
   <li>
-    <a class="" title="return" href="../return/">
+    <a class="" title="return" href="../../exit-status/return/">
       return
     </a>
     
@@ -342,30 +342,9 @@
       
         
   <li>
-    <a class="current" title="doc" href="./">
+    <a class="" title="doc" href="../../exit-status/doc/">
       doc
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="man bash" href="#man-bash">
-                man bash
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Bash Reference Manual" href="#bash-reference-manual">
-                Bash Reference Manual
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -381,7 +360,7 @@
       
         
   <li>
-    <a class="" title="positional parameters" href="../../arguments/positional_parameters/">
+    <a class="" title="positional parameters" href="../positional_parameters/">
       positional parameters
     </a>
     
@@ -390,7 +369,7 @@
       
         
   <li>
-    <a class="" title="special parameters" href="../../arguments/special_parameters/">
+    <a class="" title="special parameters" href="../special_parameters/">
       special parameters
     </a>
     
@@ -399,9 +378,48 @@
       
         
   <li>
-    <a class="" title="set positional parameters" href="../../arguments/set_positional_parameters/">
+    <a class="current" title="set positional parameters" href="./">
       set positional parameters
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="範例 ex_001" href="#ex_001">
+                範例 ex_001
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 ex_002" href="#ex_002">
+                範例 ex_002
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 ex_003" href="#ex_003">
+                範例 ex_003
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 ex_004" href="#ex_004">
+                範例 ex_004
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="文件說明" href="#_1">
+                文件說明
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -434,66 +452,296 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="exit-status">Exit Status</h1>
-<h2 id="man-bash">man bash</h2>
-<pre class="code"><code>$ man bash</code></pre>
+          <h1 id="set-positional-parameters">Set Positional Parameters</h1>
+<h2 id="ex_001">範例 ex_001</h2>
+<p>ex_001.sh</p>
+<pre class="code"><code class="language-sh">#!/usr/bin/env bash
+
+set - aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo
+
+echo '=============================================='
+
+echo '$@:' $@
+echo '$*:' $*
+
+echo '=============================================='
+
+echo '$#:' $#
+
+echo '=============================================='
+
+echo '$0:' $0
+echo '$1:' $1
+echo '$2:' $2
+echo '$3:' $3
+echo '$4:' $4
+echo '$5:' $5
+echo '$6:' $6
+echo '$7:' $7
+echo '$8:' $8
+echo '$9:' $9
+echo '${10}:' ${10}
+echo '${11}:' ${11}
+echo '${12}:' ${12}
+echo '${13}:' ${13}
+echo '${14}:' ${14}
+echo '${15}:' ${15}
+
+echo '=============================================='</code></pre>
 
 
-<p>可以找到</p>
-<pre class="code"><code>EXIT STATUS
-       The exit status of an executed command is the value returned by the waitpid system call or equivalent function.
-       Exit statuses fall between 0 and 255, though, as explained below, the shell may use values above 125 specially.
-       Exit statuses from shell builtins and compound commands are also limited to this range. Under  certain  circum‐
-       stances, the shell will use special values to indicate specific failure modes.
-
-       For  the shell's purposes, a command which exits with a zero exit status has succeeded.  An exit status of zero
-       indicates success.  A non-zero exit status indicates failure.  When a command terminates on a fatal  signal  N,
-       bash uses the value of 128+N as the exit status.
-
-       If  a  command  is not found, the child process created to execute it returns a status of 127.  If a command is
-       found but is not executable, the return status is 126.
-
-       If a command fails because of an error during expansion or redirection, the exit status is greater than zero.
-
-       Shell builtin commands return a status of 0 (true) if successful, and non-zero (false) if an error occurs while
-       they execute.  All builtins return an exit status of 2 to indicate incorrect usage.
-
-       Bash  itself  returns the exit status of the last command executed, unless a syntax error occurs, in which case
-       it exits with a non-zero value.  See also the exit builtin command below.</code></pre>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ ./ex_001.sh a b c d e f g h i j k l m n o</code></pre>
 
 
-<p>可以找到</p>
-<pre class="code"><code>ARGUMENTS
-       If arguments remain after option processing, and neither the -c nor the -s option has been supplied, the  first
-       argument is assumed to be the name of a file containing shell commands.  If bash is invoked in this fashion, $0
-       is set to the name of the file, and the positional parameters are set to the remaining arguments.   Bash  reads
-       and  executes  commands  from this file, then exits.  Bash's exit status is the exit status of the last command
-       executed in the script.  If no commands are executed, the exit status is 0.  An attempt is first made  to  open
-       the  file  in  the current directory, and, if no file is found, then the shell searches the directories in PATH
-       for the script.</code></pre>
+<p>顯示</p>
+<pre class="code"><code>==============================================
+$@: aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo
+$*: aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo
+==============================================
+$#: 15
+==============================================
+$0: ./ex_001.sh
+$1: aa
+$2: bb
+$3: cc
+$4: dd
+$5: ee
+$6: ff
+$7: gg
+$8: hh
+$9: ii
+${10}: jj
+${11}: kk
+${12}: ll
+${13}: mm
+${14}: nn
+${15}: oo
+==============================================</code></pre>
 
 
-<h2 id="bash-reference-manual">Bash Reference Manual</h2>
-<h3 id="2-definitions-exit-status"><a href="https://www.gnu.org/software/bash/manual/bashref.html#Definitions">2 Definitions</a> / exit status</h3>
-<pre class="code"><code>exit status
+<h2 id="ex_002">範例 ex_002</h2>
+<p>ex_002.sh</p>
+<pre class="code"><code class="language-sh">#!/usr/bin/env bash
 
-    The value returned by a command to its caller. The value is restricted to eight bits, so the maximum value is 255.</code></pre>
+set -- aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo
+
+echo '=============================================='
+
+echo '$@:' $@
+echo '$*:' $*
+
+echo '=============================================='
+
+echo '$#:' $#
+
+echo '=============================================='
+
+echo '$0:' $0
+echo '$1:' $1
+echo '$2:' $2
+echo '$3:' $3
+echo '$4:' $4
+echo '$5:' $5
+echo '$6:' $6
+echo '$7:' $7
+echo '$8:' $8
+echo '$9:' $9
+echo '${10}:' ${10}
+echo '${11}:' ${11}
+echo '${12}:' ${12}
+echo '${13}:' ${13}
+echo '${14}:' ${14}
+echo '${15}:' ${15}
+
+echo '=============================================='</code></pre>
 
 
-<h3 id="3-basic-shell-features-37-executing-commands-375-exit-status">3 Basic Shell Features / 3.7 Executing Commands / <a href="https://www.gnu.org/software/bash/manual/bashref.html#Exit-Status">3.7.5 Exit Status</a></h3>
-<pre class="code"><code>3.7.5 Exit Status
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ ./ex_002.sh a b c d e f g h i j k l m n o</code></pre>
 
-The exit status of an executed command is the value returned by the waitpid system call or equivalent function. Exit statuses fall between 0 and 255, though, as explained below, the shell may use values above 125 specially. Exit statuses from shell builtins and compound commands are also limited to this range. Under certain circumstances, the shell will use special values to indicate specific failure modes.
 
-For the shell’s purposes, a command which exits with a zero exit status has succeeded. A non-zero exit status indicates failure. This seemingly counter-intuitive scheme is used so there is one well-defined way to indicate success and a variety of ways to indicate various failure modes. When a command terminates on a fatal signal whose number is N, Bash uses the value 128+N as the exit status.
+<p>顯示</p>
+<pre class="code"><code>==============================================
+$@: aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo
+$*: aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo
+==============================================
+$#: 15
+==============================================
+$0: ./ex_002.sh
+$1: aa
+$2: bb
+$3: cc
+$4: dd
+$5: ee
+$6: ff
+$7: gg
+$8: hh
+$9: ii
+${10}: jj
+${11}: kk
+${12}: ll
+${13}: mm
+${14}: nn
+${15}: oo
+==============================================</code></pre>
 
-If a command is not found, the child process created to execute it returns a status of 127. If a command is found but is not executable, the return status is 126.
 
-If a command fails because of an error during expansion or redirection, the exit status is greater than zero.
+<h2 id="ex_003">範例 ex_003</h2>
+<p>ex_003.sh</p>
+<pre class="code"><code class="language-sh">#!/usr/bin/env bash
 
-The exit status is used by the Bash conditional commands (see Conditional Constructs) and some of the list constructs (see Lists).
+set -
 
-All of the Bash builtins return an exit status of zero if they succeed and a non-zero status on failure, so they may be used by the conditional and list constructs. All builtins return an exit status of 2 to indicate incorrect usage.</code></pre>
+echo '=============================================='
+
+echo '$@:' $@
+echo '$*:' $*
+
+echo '=============================================='
+
+echo '$#:' $#
+
+echo '=============================================='
+
+echo '$0:' $0
+echo '$1:' $1
+echo '$2:' $2
+echo '$3:' $3
+echo '$4:' $4
+echo '$5:' $5
+echo '$6:' $6
+echo '$7:' $7
+echo '$8:' $8
+echo '$9:' $9
+echo '${10}:' ${10}
+echo '${11}:' ${11}
+echo '${12}:' ${12}
+echo '${13}:' ${13}
+echo '${14}:' ${14}
+echo '${15}:' ${15}
+
+echo '=============================================='</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ ./ex_003.sh a b c d e f g h i j k l m n o</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>==============================================
+$@: a b c d e f g h i j k l m n o
+$*: a b c d e f g h i j k l m n o
+==============================================
+$#: 15
+==============================================
+$0: ./ex_003.sh
+$1: a
+$2: b
+$3: c
+$4: d
+$5: e
+$6: f
+$7: g
+$8: h
+$9: i
+${10}: j
+${11}: k
+${12}: l
+${13}: m
+${14}: n
+${15}: o
+==============================================</code></pre>
+
+
+<h2 id="ex_004">範例 ex_004</h2>
+<p>ex_004.sh</p>
+<pre class="code"><code class="language-sh">#!/usr/bin/env bash
+
+set --
+
+echo '=============================================='
+
+echo '$@:' $@
+echo '$*:' $*
+
+echo '=============================================='
+
+echo '$#:' $#
+
+echo '=============================================='
+
+echo '$0:' $0
+echo '$1:' $1
+echo '$2:' $2
+echo '$3:' $3
+echo '$4:' $4
+echo '$5:' $5
+echo '$6:' $6
+echo '$7:' $7
+echo '$8:' $8
+echo '$9:' $9
+echo '${10}:' ${10}
+echo '${11}:' ${11}
+echo '${12}:' ${12}
+echo '${13}:' ${13}
+echo '${14}:' ${14}
+echo '${15}:' ${15}
+
+echo '=============================================='</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ ./ex_004.sh a b c d e f g h i j k l m n o</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>==============================================
+$@:
+$*:
+==============================================
+$#: 0
+==============================================
+$0: ./ex_004.sh
+$1:
+$2:
+$3:
+$4:
+$5:
+$6:
+$7:
+$8:
+$9:
+${10}:
+${11}:
+${12}:
+${13}:
+${14}:
+${15}:
+==============================================</code></pre>
+
+
+<h2 id="_1">文件說明</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ help set</code></pre>
+
+
+<p>可以看到下面一段說明</p>
+<pre class="code"><code>set: set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...]
+    Set or unset values of shell options and positional parameters.
+
+    Change the value of shell attributes and positional parameters, or
+    display the names and values of shell variables.
+
+    Options:
+
+...略...
+
+      --  Assign any remaining arguments to the positional parameters.
+          If there are no remaining arguments, the positional parameters
+          are unset.
+      -   Assign any remaining arguments to the positional parameters.
+          The -x and -v options are turned off.</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -512,7 +760,7 @@ All of the Bash builtins return an exit status of zero if they succeed and a non
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../return/" title="return">
+        <a href="../special_parameters/" title="special parameters">
           <span class="direction">
             上一頁
           </span>
@@ -522,7 +770,7 @@ All of the Bash builtins return an exit status of zero if they succeed and a non
             </div>
             <div class="stretch">
               <div class="title">
-                return
+                special parameters
               </div>
             </div>
           </div>
@@ -530,22 +778,6 @@ All of the Bash builtins return an exit status of zero if they succeed and a non
       
     </div>
     <div class="next">
-      
-        <a href="../../arguments/positional_parameters/" title="positional parameters">
-          <span class="direction">
-            下一頁
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                positional parameters
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
       
     </div>
   </nav>

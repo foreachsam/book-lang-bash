@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>concept - GNU Bash 學習筆記</title>
+        <title>$? - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/concept/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/special_parameters/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/concept/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/special_parameters/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/concept//../../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/special_parameters//../../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -97,7 +97,7 @@
             
           </span>
         
-        concept
+        $?
       </div>
     </div>
     
@@ -315,8 +315,8 @@
       
         
   <li>
-    <a class="current" title="concept" href="./">
-      concept
+    <a class="current" title="$?" href="./">
+      $?
     </a>
     
       
@@ -326,20 +326,14 @@
         <ul>
           
             <li class="anchor">
-              <a title="$?" href="#_1">
-                $?
+              <a title="範例" href="#_2">
+                範例
               </a>
             </li>
           
             <li class="anchor">
-              <a title="exit" href="#exit">
-                exit
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="return" href="#return">
-                return
+              <a title="文件說明" href="#_3">
+                文件說明
               </a>
             </li>
           
@@ -351,8 +345,62 @@
       
         
   <li>
+    <a class="" title="exit" href="../exit/">
+      exit
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="return" href="../return/">
+      return
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
     <a class="" title="doc" href="../doc/">
       doc
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">arguments</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="positional parameters" href="../../arguments/positional_parameters/">
+      positional parameters
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="special parameters" href="../../arguments/special_parameters/">
+      special parameters
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="set positional parameters" href="../../arguments/set_positional_parameters/">
+      set positional parameters
     </a>
     
   </li>
@@ -386,9 +434,8 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="exit-status">Exit Status</h1>
-<h2 id="_1">$?</h2>
-<h3 id="ex">ex</h3>
+          <h1 id="_1">$?</h1>
+<h2 id="_2">範例</h2>
 <p>執行</p>
 <pre class="code"><code class="language-sh">$ true</code></pre>
 
@@ -413,7 +460,7 @@
 <pre class="code"><code>1</code></pre>
 
 
-<h3 id="doc">doc</h3>
+<h2 id="_3">文件說明</h2>
 <p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a></p>
 <p>可以找到下面這一段說明</p>
 <pre class="code"><code>Special Parameters
@@ -435,18 +482,10 @@
 
 <p>更多範例和說明請參考</p>
 <ul>
-<li>help <a href="http://foreachsam.github.io/book-lang-bash/book/content/help/colon/">:</a></li>
-<li>help <a href="http://foreachsam.github.io/book-lang-bash/book/content/help/true/">true</a></li>
-<li>help <a href="http://foreachsam.github.io/book-lang-bash/book/content/help/false/">false</a></li>
-<li>help <a href="http://foreachsam.github.io/book-lang-bash/book/content/help/echo/">echo</a></li>
-</ul>
-<h2 id="exit">exit</h2>
-<ul>
-<li>help <a href="http://foreachsam.github.io/book-lang-bash/book/content/help/exit/">exit</a></li>
-</ul>
-<h2 id="return">return</h2>
-<ul>
-<li>help <a href="http://foreachsam.github.io/book-lang-bash/book/content/help/return/">return</a></li>
+<li>help <a href="../../../../book-lang-bash/book/content/help/colon/">:</a></li>
+<li>help <a href="../../../../book-lang-bash/book/content/help/true/">true</a></li>
+<li>help <a href="../../../../book-lang-bash/book/content/help/false/">false</a></li>
+<li>help <a href="../../../../book-lang-bash/book/content/help/echo/">echo</a></li>
 </ul>
           <aside class="copyright" role="note">
             
@@ -485,14 +524,14 @@
     </div>
     <div class="next">
       
-        <a href="../doc/" title="doc">
+        <a href="../exit/" title="exit">
           <span class="direction">
             下一頁
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                doc
+                exit
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
