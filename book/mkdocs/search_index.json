@@ -411,6 +411,51 @@
             "title": "function return"
         },
         {
+            "location": "/content/help/if/",
+            "text": "Shell Keyword \u300cif\u300d\n\n\ntype if\n\n\n\u57f7\u884c\n\n\n$ type if\n\n\n\n\n\u986f\u793a\n\n\nif is a shell keyword\n\n\n\n\nhelp if\n\n\n\u57f7\u884c\n\n\n$ help if\n\n\n\n\n\u986f\u793a\n\n\nif: if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... [ else COMMANDS; ] fi\n    Execute commands based on conditional.\n\n    The `if COMMANDS' list is executed.  If its exit status is zero, then the\n    `then COMMANDS' list is executed.  Otherwise, each `elif COMMANDS' list is\n    executed in turn, and if its exit status is zero, the corresponding\n    `then COMMANDS' list is executed and the if command completes.  Otherwise,\n    the `else COMMANDS' list is executed, if present.  The exit status of the\n    entire construct is the exit status of the last command executed, or zero\n    if no condition tested true.\n\n    Exit Status:\n    Returns the status of the last command executed.\n\n\n\n\n\u7bc4\u4f8b 001\n\n\nif true; then :; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif true; then\n    :;\nfi\n\n\n\n\n\u7bc4\u4f8b 002\n\n\nif true; then echo 'yes'; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif true; then\n    echo 'yes';\nfi\n\n\n\n\n\u986f\u793a\n\n\nyes\n\n\n\n\n\u7bc4\u4f8b 003\n\n\nif false; then echo 'm1'; else echo 'm2'; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif false; then\n    echo 'm1';\nelse\n    echo 'm2';\nfi\n\n\n\n\n\u7bc4\u4f8b 004\n\n\nif false; then echo 'm1'; elif true; then echo 'm2'; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif false; then\n    echo 'm1';\nelif true; then\n    echo 'm2';\nfi\n\n\n\n\n\u7bc4\u4f8b 005\n\n\nif false; then echo 'm1'; elif false; then echo 'm2'; else echo 'm3'; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif false; then\n    echo 'm1';\nelif false; then\n    echo 'm2';\nelse\n    echo 'm3'; \nfi",
+            "title": "if"
+        },
+        {
+            "location": "/content/help/if/#shell-keyword-if",
+            "text": "",
+            "title": "Shell Keyword \u300cif\u300d"
+        },
+        {
+            "location": "/content/help/if/#type-if",
+            "text": "\u57f7\u884c  $ type if  \u986f\u793a  if is a shell keyword",
+            "title": "type if"
+        },
+        {
+            "location": "/content/help/if/#help-if",
+            "text": "\u57f7\u884c  $ help if  \u986f\u793a  if: if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... [ else COMMANDS; ] fi\n    Execute commands based on conditional.\n\n    The `if COMMANDS' list is executed.  If its exit status is zero, then the\n    `then COMMANDS' list is executed.  Otherwise, each `elif COMMANDS' list is\n    executed in turn, and if its exit status is zero, the corresponding\n    `then COMMANDS' list is executed and the if command completes.  Otherwise,\n    the `else COMMANDS' list is executed, if present.  The exit status of the\n    entire construct is the exit status of the last command executed, or zero\n    if no condition tested true.\n\n    Exit Status:\n    Returns the status of the last command executed.",
+            "title": "help if"
+        },
+        {
+            "location": "/content/help/if/#001",
+            "text": "if true; then :; fi  \u5beb\u6210\u591a\u884c  if true; then\n    :;\nfi",
+            "title": "\u7bc4\u4f8b 001"
+        },
+        {
+            "location": "/content/help/if/#002",
+            "text": "if true; then echo 'yes'; fi  \u5beb\u6210\u591a\u884c  if true; then\n    echo 'yes';\nfi  \u986f\u793a  yes",
+            "title": "\u7bc4\u4f8b 002"
+        },
+        {
+            "location": "/content/help/if/#003",
+            "text": "if false; then echo 'm1'; else echo 'm2'; fi  \u5beb\u6210\u591a\u884c  if false; then\n    echo 'm1';\nelse\n    echo 'm2';\nfi",
+            "title": "\u7bc4\u4f8b 003"
+        },
+        {
+            "location": "/content/help/if/#004",
+            "text": "if false; then echo 'm1'; elif true; then echo 'm2'; fi  \u5beb\u6210\u591a\u884c  if false; then\n    echo 'm1';\nelif true; then\n    echo 'm2';\nfi",
+            "title": "\u7bc4\u4f8b 004"
+        },
+        {
+            "location": "/content/help/if/#005",
+            "text": "if false; then echo 'm1'; elif false; then echo 'm2'; else echo 'm3'; fi  \u5beb\u6210\u591a\u884c  if false; then\n    echo 'm1';\nelif false; then\n    echo 'm2';\nelse\n    echo 'm3'; \nfi",
+            "title": "\u7bc4\u4f8b 005"
+        },
+        {
             "location": "/content/subject/exit-status/special_parameters/",
             "text": "$?\n\n\n\u7bc4\u4f8b\n\n\n\u57f7\u884c\n\n\n$ true\n\n\n\n\n\u63a5\u8457\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\n\u57f7\u884c\n\n\n$ false\n\n\n\n\n\u63a5\u8457\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1\n\n\n\n\n\u6587\u4ef6\u8aaa\u660e\n\n\n$ man \nbash\n\n\n\u53ef\u4ee5\u627e\u5230\u4e0b\u9762\u9019\u4e00\u6bb5\u8aaa\u660e\n\n\nSpecial Parameters\n    The shell treats several parameters specially.  These parameters may only be referenced; assignment to them  is\n    not allowed.\n...\u7565...\n    ?      Expands to the exit status of the most recently executed foreground pipeline.\n\n...\u7565...\n\n\n\n\n\u6216\u662f\u5728\n\n\nBash Reference Manual / 3 Basic Shell Features / 3.4 Shell Parameters / \n3.4.2 Special Parameters\n\n\n\u53ef\u4ee5\u627e\u5230\u4e0b\u9762\u9019\u4e00\u6bb5\u8aaa\u660e\n\n\n?\n\n    ($?) Expands to the exit status of the most recently executed foreground pipeline.\n\n\n\n\n\u66f4\u591a\u7bc4\u4f8b\u548c\u8aaa\u660e\u8acb\u53c3\u8003\n\n\n\n\nhelp \n:\n\n\nhelp \ntrue\n\n\nhelp \nfalse\n\n\nhelp \necho",
             "title": "$?"

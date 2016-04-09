@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>true - GNU Bash 學習筆記</title>
+        <title>if - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/true/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/if/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/true/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/if/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/help/true//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/help/if//../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -97,7 +97,7 @@
             
           </span>
         
-        true
+        if
       </div>
     </div>
     
@@ -261,36 +261,9 @@
       
         
   <li>
-    <a class="current" title="true" href="./">
+    <a class="" title="true" href="../true/">
       true
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="type true" href="#type-true">
-                type true
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="help true" href="#help-true">
-                help true
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Exit Status" href="#exit-status">
-                Exit Status
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -333,9 +306,60 @@
       
         
   <li>
-    <a class="" title="if" href="../if/">
+    <a class="current" title="if" href="./">
       if
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="type if" href="#type-if">
+                type if
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="help if" href="#help-if">
+                help if
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 001" href="#001">
+                範例 001
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 002" href="#002">
+                範例 002
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 003" href="#003">
+                範例 003
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 004" href="#004">
+                範例 004
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 005" href="#005">
+                範例 005
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -458,41 +482,97 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="shell-builtin-command-true">Shell Builtin Command 「true」</h1>
-<h2 id="type-true">type true</h2>
+          <h1 id="shell-keyword-if">Shell Keyword 「if」</h1>
+<h2 id="type-if">type if</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type true</code></pre>
+<pre class="code"><code class="language-sh">$ type if</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>true is a shell builtin</code></pre>
+<pre class="code"><code>if is a shell keyword</code></pre>
 
 
-<h2 id="help-true">help true</h2>
+<h2 id="help-if">help if</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ help true</code></pre>
+<pre class="code"><code class="language-sh">$ help if</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>true: true
-    Return a successful result.
+<pre class="code"><code>if: if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... [ else COMMANDS; ] fi
+    Execute commands based on conditional.
+
+    The `if COMMANDS' list is executed.  If its exit status is zero, then the
+    `then COMMANDS' list is executed.  Otherwise, each `elif COMMANDS' list is
+    executed in turn, and if its exit status is zero, the corresponding
+    `then COMMANDS' list is executed and the if command completes.  Otherwise,
+    the `else COMMANDS' list is executed, if present.  The exit status of the
+    entire construct is the exit status of the last command executed, or zero
+    if no condition tested true.
 
     Exit Status:
-    Always succeeds.</code></pre>
+    Returns the status of the last command executed.</code></pre>
 
 
-<h2 id="exit-status">Exit Status</h2>
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ true</code></pre>
+<h2 id="001">範例 001</h2>
+<pre class="code"><code class="language-sh">if true; then :; fi</code></pre>
 
 
-<p>沒有任何顯示，直接換下一個提示字元</p>
-<p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
+<p>寫成多行</p>
+<pre class="code"><code class="language-sh">if true; then
+    :;
+fi</code></pre>
+
+
+<h2 id="002">範例 002</h2>
+<pre class="code"><code>if true; then echo 'yes'; fi</code></pre>
+
+
+<p>寫成多行</p>
+<pre class="code"><code class="language-sh">if true; then
+    echo 'yes';
+fi</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>0</code></pre>
+<pre class="code"><code>yes</code></pre>
+
+
+<h2 id="003">範例 003</h2>
+<pre class="code"><code>if false; then echo 'm1'; else echo 'm2'; fi</code></pre>
+
+
+<p>寫成多行</p>
+<pre class="code"><code>if false; then
+    echo 'm1';
+else
+    echo 'm2';
+fi</code></pre>
+
+
+<h2 id="004">範例 004</h2>
+<pre class="code"><code>if false; then echo 'm1'; elif true; then echo 'm2'; fi</code></pre>
+
+
+<p>寫成多行</p>
+<pre class="code"><code>if false; then
+    echo 'm1';
+elif true; then
+    echo 'm2';
+fi</code></pre>
+
+
+<h2 id="005">範例 005</h2>
+<pre class="code"><code>if false; then echo 'm1'; elif false; then echo 'm2'; else echo 'm3'; fi</code></pre>
+
+
+<p>寫成多行</p>
+<pre class="code"><code>if false; then
+    echo 'm1';
+elif false; then
+    echo 'm2';
+else
+    echo 'm3'; 
+fi</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -511,7 +591,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../colon/" title=":">
+        <a href="../return/" title="return">
           <span class="direction">
             上一頁
           </span>
@@ -521,7 +601,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                :
+                return
               </div>
             </div>
           </div>
@@ -530,14 +610,14 @@
     </div>
     <div class="next">
       
-        <a href="../false/" title="false">
+        <a href="../../subject/exit-status/special_parameters/" title="$?">
           <span class="direction">
             下一頁
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                false
+                $?
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,7 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/referance/manual/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,25 +23,25 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-doc/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/deb-package/bash-completion/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -51,7 +51,7 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/command/bash/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -61,43 +61,49 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/colon/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/true/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/false/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/echo/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/exit/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/return/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://foreachsam.github.io/book-lang-bash/book/content/help/if/</loc>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -107,25 +113,25 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/special_parameters/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/exit/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/return/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/doc/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -135,25 +141,25 @@
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/positional_parameters/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/special_parameters/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/set_positional_parameters/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/option_end_flag/</loc>
-     <lastmod>2016-04-08</lastmod>
+     <lastmod>2016-04-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
