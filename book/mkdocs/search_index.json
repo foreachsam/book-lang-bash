@@ -496,6 +496,31 @@
             "title": "return"
         },
         {
+            "location": "/content/subject/exit-status/if/",
+            "text": "if\n\n\nhelp\n\n\n\n\nhelp \nif\n\n\nhelp \nreturn\n\n\n\n\n\u7bc4\u4f8b if_function_return\n\n\nif_function_return.sh\n\n\n#!/usr/bin/env bash\n\nfunction_return () {\n    return 0;\n}\n\n\nif function_return; then\n    echo $?\n    echo 'yes'\nfi\n\n\n\n\n\u57f7\u884c\n\n\n$ ./if_function_return.sh\n\n\n\n\n\u986f\u793a\n\n\n0\nyes\n\n\n\n\n\u7bc4\u4f8b if_function_return_last_command\n\n\nif_function_return_last_command.sh\n\n\n#!/usr/bin/env bash\n\nfunction_return () {\n    true;\n}\n\nif function_return; then\n    echo $?\n    echo 'yes'\nfi\n\n\n\n\n\u57f7\u884c\n\n\n$ ./if_function_return_last_command.sh\n\n\n\n\n\u986f\u793a\n\n\n0\nyes",
+            "title": "if"
+        },
+        {
+            "location": "/content/subject/exit-status/if/#if",
+            "text": "",
+            "title": "if"
+        },
+        {
+            "location": "/content/subject/exit-status/if/#help",
+            "text": "help  if  help  return",
+            "title": "help"
+        },
+        {
+            "location": "/content/subject/exit-status/if/#if_function_return",
+            "text": "if_function_return.sh  #!/usr/bin/env bash\n\nfunction_return () {\n    return 0;\n}\n\n\nif function_return; then\n    echo $?\n    echo 'yes'\nfi  \u57f7\u884c  $ ./if_function_return.sh  \u986f\u793a  0\nyes",
+            "title": "\u7bc4\u4f8b if_function_return"
+        },
+        {
+            "location": "/content/subject/exit-status/if/#if_function_return_last_command",
+            "text": "if_function_return_last_command.sh  #!/usr/bin/env bash\n\nfunction_return () {\n    true;\n}\n\nif function_return; then\n    echo $?\n    echo 'yes'\nfi  \u57f7\u884c  $ ./if_function_return_last_command.sh  \u986f\u793a  0\nyes",
+            "title": "\u7bc4\u4f8b if_function_return_last_command"
+        },
+        {
             "location": "/content/subject/exit-status/doc/",
             "text": "Exit Status\n\n\nman bash\n\n\n$ man bash\n\n\n\n\n\u53ef\u4ee5\u627e\u5230\n\n\nEXIT STATUS\n       The exit status of an executed command is the value returned by the waitpid system call or equivalent function.\n       Exit statuses fall between 0 and 255, though, as explained below, the shell may use values above 125 specially.\n       Exit statuses from shell builtins and compound commands are also limited to this range. Under  certain  circum\u2010\n       stances, the shell will use special values to indicate specific failure modes.\n\n       For  the shell's purposes, a command which exits with a zero exit status has succeeded.  An exit status of zero\n       indicates success.  A non-zero exit status indicates failure.  When a command terminates on a fatal  signal  N,\n       bash uses the value of 128+N as the exit status.\n\n       If  a  command  is not found, the child process created to execute it returns a status of 127.  If a command is\n       found but is not executable, the return status is 126.\n\n       If a command fails because of an error during expansion or redirection, the exit status is greater than zero.\n\n       Shell builtin commands return a status of 0 (true) if successful, and non-zero (false) if an error occurs while\n       they execute.  All builtins return an exit status of 2 to indicate incorrect usage.\n\n       Bash  itself  returns the exit status of the last command executed, unless a syntax error occurs, in which case\n       it exits with a non-zero value.  See also the exit builtin command below.\n\n\n\n\n\u53ef\u4ee5\u627e\u5230\n\n\nARGUMENTS\n       If arguments remain after option processing, and neither the -c nor the -s option has been supplied, the  first\n       argument is assumed to be the name of a file containing shell commands.  If bash is invoked in this fashion, $0\n       is set to the name of the file, and the positional parameters are set to the remaining arguments.   Bash  reads\n       and  executes  commands  from this file, then exits.  Bash's exit status is the exit status of the last command\n       executed in the script.  If no commands are executed, the exit status is 0.  An attempt is first made  to  open\n       the  file  in  the current directory, and, if no file is found, then the shell searches the directories in PATH\n       for the script.\n\n\n\n\nBash Reference Manual\n\n\n2 Definitions\n / exit status\n\n\nexit status\n\n    The value returned by a command to its caller. The value is restricted to eight bits, so the maximum value is 255.\n\n\n\n\n3 Basic Shell Features / 3.7 Executing Commands / \n3.7.5 Exit Status\n\n\n3.7.5 Exit Status\n\nThe exit status of an executed command is the value returned by the waitpid system call or equivalent function. Exit statuses fall between 0 and 255, though, as explained below, the shell may use values above 125 specially. Exit statuses from shell builtins and compound commands are also limited to this range. Under certain circumstances, the shell will use special values to indicate specific failure modes.\n\nFor the shell\u2019s purposes, a command which exits with a zero exit status has succeeded. A non-zero exit status indicates failure. This seemingly counter-intuitive scheme is used so there is one well-defined way to indicate success and a variety of ways to indicate various failure modes. When a command terminates on a fatal signal whose number is N, Bash uses the value 128+N as the exit status.\n\nIf a command is not found, the child process created to execute it returns a status of 127. If a command is found but is not executable, the return status is 126.\n\nIf a command fails because of an error during expansion or redirection, the exit status is greater than zero.\n\nThe exit status is used by the Bash conditional commands (see Conditional Constructs) and some of the list constructs (see Lists).\n\nAll of the Bash builtins return an exit status of zero if they succeed and a non-zero status on failure, so they may be used by the conditional and list constructs. All builtins return an exit status of 2 to indicate incorrect usage.",
             "title": "doc"
