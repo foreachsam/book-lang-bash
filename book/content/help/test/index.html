@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>bash - GNU Bash 學習筆記</title>
+        <title>test - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/command/bash/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/test/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/command/bash/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/test/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/command/bash//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/help/test//../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -92,12 +92,12 @@
           <span class="path">
             
               
-                command <i class="icon icon-link"></i>
+                help <i class="icon icon-link"></i>
               
             
           </span>
         
-        bash
+        test
       </div>
     </div>
     
@@ -225,54 +225,9 @@
       
         
   <li>
-    <a class="current" title="bash" href="./">
+    <a class="" title="bash" href="../../command/bash/">
       bash
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="觀看 help" href="#help">
-                觀看 help
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="觀看版本" href="#_1">
-                觀看版本
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="執行指令" href="#_2">
-                執行指令
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="觀看 manpage" href="#manpage">
-                觀看 manpage
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="查詢 bash 放在那個位置" href="#bash">
-                查詢 bash 放在那個位置
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="查詢 bash 屬於那個套件" href="#bash_1">
-                查詢 bash 屬於那個套件
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -288,7 +243,7 @@
       
         
   <li>
-    <a class="" title="index" href="../../help/">
+    <a class="" title="index" href="../">
       index
     </a>
     
@@ -297,7 +252,7 @@
       
         
   <li>
-    <a class="" title=":" href="../../help/colon/">
+    <a class="" title=":" href="../colon/">
       :
     </a>
     
@@ -306,7 +261,7 @@
       
         
   <li>
-    <a class="" title="true" href="../../help/true/">
+    <a class="" title="true" href="../true/">
       true
     </a>
     
@@ -315,7 +270,7 @@
       
         
   <li>
-    <a class="" title="false" href="../../help/false/">
+    <a class="" title="false" href="../false/">
       false
     </a>
     
@@ -324,7 +279,7 @@
       
         
   <li>
-    <a class="" title="echo" href="../../help/echo/">
+    <a class="" title="echo" href="../echo/">
       echo
     </a>
     
@@ -333,7 +288,7 @@
       
         
   <li>
-    <a class="" title="exit" href="../../help/exit/">
+    <a class="" title="exit" href="../exit/">
       exit
     </a>
     
@@ -342,7 +297,7 @@
       
         
   <li>
-    <a class="" title="return" href="../../help/return/">
+    <a class="" title="return" href="../return/">
       return
     </a>
     
@@ -351,7 +306,7 @@
       
         
   <li>
-    <a class="" title="if" href="../../help/if/">
+    <a class="" title="if" href="../if/">
       if
     </a>
     
@@ -360,7 +315,7 @@
       
         
   <li>
-    <a class="" title="[" href="../../help/square_brackets/">
+    <a class="" title="[" href="../square_brackets/">
       [
     </a>
     
@@ -369,9 +324,30 @@
       
         
   <li>
-    <a class="" title="test" href="../../help/test/">
+    <a class="current" title="test" href="./">
       test
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="type test" href="#type-test">
+                type test
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="help test" href="#help-test">
+                help test
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -503,88 +479,105 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="bash-command">bash command</h1>
-<h2 id="help">觀看 help</h2>
+          <h1 id="shell-builtin-command-test">Shell Builtin Command 「test」</h1>
+<h2 id="type-test">type test</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ bash --help</code></pre>
+<pre class="code"><code class="language-sh">$ type test</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>GNU bash, version 4.3.11(1)-release-(x86_64-pc-linux-gnu)
-Usage:  bash [GNU long option] [option] ...
-        bash [GNU long option] [option] script-file ...
-GNU long options:
-        --debug
-        --debugger
-        --dump-po-strings
-        --dump-strings
-        --help
-        --init-file
-        --login
-        --noediting
-        --noprofile
-        --norc
-        --posix
-        --rcfile
-        --restricted
-        --verbose
-        --version
-Shell options:
-        -ilrsD or -c command or -O shopt_option         (invocation only)
-        -abefhkmnptuvxBCHP or -o option
-Type `bash -c &quot;help set&quot;' for more information about shell options.
-Type `bash -c help' for more information about shell builtin commands.
-Use the `bashbug' command to report bugs.</code></pre>
+<pre class="code"><code>test is a shell builtin</code></pre>
 
 
-<h2 id="_1">觀看版本</h2>
+<h2 id="help-test">help test</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ bash --version</code></pre>
+<pre class="code"><code class="language-sh">$ help test</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
-Copyright (C) 2013 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
+<pre class="code"><code>test: test [expr]
+    Evaluate conditional expression.
 
-This is free software; you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.</code></pre>
+    Exits with a status of 0 (true) or 1 (false) depending on
+    the evaluation of EXPR.  Expressions may be unary or binary.  Unary
+    expressions are often used to examine the status of a file.  There
+    are string operators and numeric comparison operators as well.
 
+    The behavior of test depends on the number of arguments.  Read the
+    bash manual page for the complete specification.
 
-<h2 id="_2">執行指令</h2>
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ bash -c &quot;echo hi&quot;</code></pre>
+    File operators:
 
+      -a FILE        True if file exists.
+      -b FILE        True if file is block special.
+      -c FILE        True if file is character special.
+      -d FILE        True if file is a directory.
+      -e FILE        True if file exists.
+      -f FILE        True if file exists and is a regular file.
+      -g FILE        True if file is set-group-id.
+      -h FILE        True if file is a symbolic link.
+      -L FILE        True if file is a symbolic link.
+      -k FILE        True if file has its `sticky' bit set.
+      -p FILE        True if file is a named pipe.
+      -r FILE        True if file is readable by you.
+      -s FILE        True if file exists and is not empty.
+      -S FILE        True if file is a socket.
+      -t FD          True if FD is opened on a terminal.
+      -u FILE        True if the file is set-user-id.
+      -w FILE        True if the file is writable by you.
+      -x FILE        True if the file is executable by you.
+      -O FILE        True if the file is effectively owned by you.
+      -G FILE        True if the file is effectively owned by your group.
+      -N FILE        True if the file has been modified since it was last read.
 
-<p>顯示</p>
-<pre class="code"><code>hi</code></pre>
+      FILE1 -nt FILE2  True if file1 is newer than file2 (according to
+                       modification date).
 
+      FILE1 -ot FILE2  True if file1 is older than file2.
 
-<h2 id="manpage">觀看 manpage</h2>
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ man bash</code></pre>
+      FILE1 -ef FILE2  True if file1 is a hard link to file2.
 
+    All file operators except -h and -L are acting on the target of a symbolic
+    link, not on the symlink itself, if FILE is a symbolic link.
 
-<p>可以看到「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a>」的使用說明。</p>
-<h2 id="bash">查詢 bash 放在那個位置</h2>
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ whereis bash</code></pre>
+    String operators:
 
+      -z STRING      True if string is empty.
 
-<p>顯示</p>
-<pre class="code"><code>bash: /bin/bash /etc/bash.bashrc /usr/share/man/man1/bash.1.gz</code></pre>
+      -n STRING
+         STRING      True if string is not empty.
 
+      STRING1 = STRING2
+                     True if the strings are equal.
+      STRING1 != STRING2
+                     True if the strings are not equal.
+      STRING1 &lt; STRING2
+                     True if STRING1 sorts before STRING2 lexicographically.
+      STRING1 &gt; STRING2
+                     True if STRING1 sorts after STRING2 lexicographically.
 
-<h2 id="bash_1">查詢 bash 屬於那個套件</h2>
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ dpkg -S /bin/bash</code></pre>
+    Other operators:
 
+      -o OPTION      True if the shell option OPTION is enabled.
+      -v VAR     True if the shell variable VAR is set
+      -R VAR     True if the shell variable VAR is set and is a name reference.
+      ! EXPR         True if expr is false.
+      EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.
+      EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.
 
-<p>顯示</p>
-<pre class="code"><code>bash: /bin/bash</code></pre>
+      arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,
+                     -lt, -le, -gt, or -ge.
 
+    Arithmetic binary operators return true if ARG1 is equal, not-equal,
+    less-than, less-than-or-equal, greater-than, or greater-than-or-equal
+    than ARG2.
 
-<p>表示「/bin/bash」是屬於「<a href="http://packages.ubuntu.com/trusty/bash">bash</a>」這個套件。</p>
+    See the bash manual page bash(1) for the handling of parameters (i.e.
+    missing parameters).
+
+    Exit Status:
+    Returns success if EXPR evaluates to true; fails if EXPR evaluates to
+    false or an invalid argument is given.</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -603,7 +596,7 @@ There is NO WARRANTY, to the extent permitted by law.</code></pre>
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../../deb-package/bash-completion/" title="bash-completion">
+        <a href="../square_brackets/" title="[">
           <span class="direction">
             上一頁
           </span>
@@ -613,7 +606,7 @@ There is NO WARRANTY, to the extent permitted by law.</code></pre>
             </div>
             <div class="stretch">
               <div class="title">
-                bash-completion
+                [
               </div>
             </div>
           </div>
@@ -622,14 +615,14 @@ There is NO WARRANTY, to the extent permitted by law.</code></pre>
     </div>
     <div class="next">
       
-        <a href="../../help/" title="index">
+        <a href="../../subject/exit-status/special_parameters/" title="$?">
           <span class="direction">
             下一頁
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                index
+                $?
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
