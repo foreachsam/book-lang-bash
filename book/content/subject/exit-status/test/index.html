@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>special parameters - GNU Bash 學習筆記</title>
+        <title>test - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/special_parameters/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/test/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/special_parameters/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/test/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/arguments/special_parameters//../../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/subject/exit-status/test//../../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -92,12 +92,12 @@
           <span class="path">
             
               
-                arguments <i class="icon icon-link"></i>
+                exit status <i class="icon icon-link"></i>
               
             
           </span>
         
-        special parameters
+        test
       </div>
     </div>
     
@@ -342,7 +342,7 @@
       
         
   <li>
-    <a class="" title="$?" href="../../exit-status/special_parameters/">
+    <a class="" title="$?" href="../special_parameters/">
       $?
     </a>
     
@@ -351,7 +351,7 @@
       
         
   <li>
-    <a class="" title="exit" href="../../exit-status/exit/">
+    <a class="" title="exit" href="../exit/">
       exit
     </a>
     
@@ -360,7 +360,7 @@
       
         
   <li>
-    <a class="" title="return" href="../../exit-status/return/">
+    <a class="" title="return" href="../return/">
       return
     </a>
     
@@ -369,16 +369,61 @@
       
         
   <li>
-    <a class="" title="test" href="../../exit-status/test/">
+    <a class="current" title="test" href="./">
       test
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="help" href="#help">
+                help
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="事前準備" href="#_1">
+                事前準備
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 001" href="#001">
+                範例 001
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 002" href="#002">
+                範例 002
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 003" href="#003">
+                範例 003
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例 004" href="#004">
+                範例 004
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
       
         
   <li>
-    <a class="" title="if" href="../../exit-status/if/">
+    <a class="" title="if" href="../if/">
       if
     </a>
     
@@ -387,7 +432,7 @@
       
         
   <li>
-    <a class="" title="doc" href="../../exit-status/doc/">
+    <a class="" title="doc" href="../doc/">
       doc
     </a>
     
@@ -405,7 +450,7 @@
       
         
   <li>
-    <a class="" title="positional parameters" href="../positional_parameters/">
+    <a class="" title="positional parameters" href="../../arguments/positional_parameters/">
       positional parameters
     </a>
     
@@ -414,37 +459,16 @@
       
         
   <li>
-    <a class="current" title="special parameters" href="./">
+    <a class="" title="special parameters" href="../../arguments/special_parameters/">
       special parameters
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="範例 ex_001" href="#ex_001">
-                範例 ex_001
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="文件說明" href="#_1">
-                文件說明
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
       
         
   <li>
-    <a class="" title="set positional parameters" href="../set_positional_parameters/">
+    <a class="" title="set positional parameters" href="../../arguments/set_positional_parameters/">
       set positional parameters
     </a>
     
@@ -453,7 +477,7 @@
       
         
   <li>
-    <a class="" title="--" href="../option_end_flag/">
+    <a class="" title="--" href="../../arguments/option_end_flag/">
       --
     </a>
     
@@ -488,93 +512,67 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="special-parameters">Special Parameters</h1>
-<h2 id="ex_001">範例 ex_001</h2>
-<p>ex_001.sh</p>
-<pre class="code"><code class="language-sh">#!/usr/bin/env bash
-
-echo '=============================================='
-
-echo '$@:' $@
-echo '$*:' $*
-
-echo '=============================================='
-
-echo '$#:' $#
-
-echo '=============================================='
-
-echo '$0:' $0
-echo '$1:' $1
-echo '$2:' $2
-echo '$3:' $3
-echo '$4:' $4
-echo '$5:' $5
-echo '$6:' $6
-echo '$7:' $7
-echo '$8:' $8
-echo '$9:' $9
-echo '${10}:' ${10}
-echo '${11}:' ${11}
-echo '${12}:' ${12}
-echo '${13}:' ${13}
-echo '${14}:' ${14}
-echo '${15}:' ${15}
-
-echo '=============================================='</code></pre>
+          <h1 id="test">test</h1>
+<h2 id="help">help</h2>
+<ul>
+<li>help <a href="../../../../content/help/test/">test</a></li>
+<li>help <a href="../../../../content/help/square_brackets/">[</a></li>
+</ul>
+<h2 id="_1">事前準備</h2>
+<p>準備一個「README.md」檔</p>
+<pre class="code"><code class="language-sh">$ touch README.md</code></pre>
 
 
+<h2 id="001">範例 001</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ ./ex_001.sh a b c d e f g h i j k l m n o</code></pre>
+<pre class="code"><code>$ test -f README.md</code></pre>
+
+
+<p>再執行</p>
+<pre class="code"><code>$ echo $?</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>==============================================
-$@: a b c d e f g h i j k l m n o
-$*: a b c d e f g h i j k l m n o
-==============================================
-$#: 15
-==============================================
-$0: ./ex_001.sh
-$1: a
-$2: b
-$3: c
-$4: d
-$5: e
-$6: f
-$7: g
-$8: h
-$9: i
-${10}: j
-${11}: k
-${12}: l
-${13}: m
-${14}: n
-${15}: o
-==============================================</code></pre>
+<pre class="code"><code>0</code></pre>
 
 
-<h2 id="_1">文件說明</h2>
+<h2 id="002">範例 002</h2>
 <p>執行</p>
-<p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/bash.1.html">bash</a></p>
-<p>可以看到下面一段說明</p>
-<pre class="code"><code>Special Parameters
-    The shell treats several parameters specially.  These parameters may only be referenced; assignment to them  is
-    not allowed.
-    *      Expands  to  the  positional  parameters,  starting  from  one.  When the expansion is not within double
-           quotes, each positional parameter expands to a separate word.  In contexts where it is performed,  those
-           words  are  subject  to further word splitting and pathname expansion.  When the expansion occurs within
-           double quotes, it expands to a single word with the value of each parameter separated by the first char‐
-           acter  of  the  IFS  special variable.  That is, &quot;$*&quot; is equivalent to &quot;$1c$2c...&quot;, where c is the first
-           character of the value of the IFS variable.  If IFS is unset, the parameters are  separated  by  spaces.
-           If IFS is null, the parameters are joined without intervening separators.
-    @      Expands  to  the  positional  parameters,  starting  from  one.  When the expansion occurs within double
-           quotes, each parameter expands to a separate word.  That is, &quot;$@&quot; is equivalent to &quot;$1&quot; &quot;$2&quot; ...  If the
-           double-quoted  expansion  occurs  within a word, the expansion of the first parameter is joined with the
-           beginning part of the original word, and the expansion of the last parameter is  joined  with  the  last
-           part  of  the  original  word.   When  there are no positional parameters, &quot;$@&quot; and $@ expand to nothing
-           (i.e., they are removed).
-    #      Expands to the number of positional parameters in decimal.</code></pre>
+<pre class="code"><code>$ test -f Makefile</code></pre>
+
+
+<p>再執行</p>
+<pre class="code"><code>$ echo $?</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>1</code></pre>
+
+
+<h2 id="003">範例 003</h2>
+<p>執行</p>
+<pre class="code"><code>$ [ -f README.md ]</code></pre>
+
+
+<p>再執行</p>
+<pre class="code"><code>$ echo $?</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>0</code></pre>
+
+
+<h2 id="004">範例 004</h2>
+<p>執行</p>
+<pre class="code"><code>$ [ -f Makefile ]</code></pre>
+
+
+<p>再執行</p>
+<pre class="code"><code>$ echo $?</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>1</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -593,7 +591,7 @@ ${15}: o
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../positional_parameters/" title="positional parameters">
+        <a href="../return/" title="return">
           <span class="direction">
             上一頁
           </span>
@@ -603,7 +601,7 @@ ${15}: o
             </div>
             <div class="stretch">
               <div class="title">
-                positional parameters
+                return
               </div>
             </div>
           </div>
@@ -612,14 +610,14 @@ ${15}: o
     </div>
     <div class="next">
       
-        <a href="../set_positional_parameters/" title="set positional parameters">
+        <a href="../if/" title="if">
           <span class="direction">
             下一頁
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                set positional parameters
+                if
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

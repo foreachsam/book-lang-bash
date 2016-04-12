@@ -411,6 +411,46 @@
             "title": "function return"
         },
         {
+            "location": "/content/help/test/",
+            "text": "Shell Builtin Command \u300ctest\u300d\n\n\ntype test\n\n\n\u57f7\u884c\n\n\n$ type test\n\n\n\n\n\u986f\u793a\n\n\ntest is a shell builtin\n\n\n\n\nhelp test\n\n\n\u57f7\u884c\n\n\n$ help test\n\n\n\n\n\u986f\u793a\n\n\ntest: test [expr]\n    Evaluate conditional expression.\n\n    Exits with a status of 0 (true) or 1 (false) depending on\n    the evaluation of EXPR.  Expressions may be unary or binary.  Unary\n    expressions are often used to examine the status of a file.  There\n    are string operators and numeric comparison operators as well.\n\n    The behavior of test depends on the number of arguments.  Read the\n    bash manual page for the complete specification.\n\n    File operators:\n\n      -a FILE        True if file exists.\n      -b FILE        True if file is block special.\n      -c FILE        True if file is character special.\n      -d FILE        True if file is a directory.\n      -e FILE        True if file exists.\n      -f FILE        True if file exists and is a regular file.\n      -g FILE        True if file is set-group-id.\n      -h FILE        True if file is a symbolic link.\n      -L FILE        True if file is a symbolic link.\n      -k FILE        True if file has its `sticky' bit set.\n      -p FILE        True if file is a named pipe.\n      -r FILE        True if file is readable by you.\n      -s FILE        True if file exists and is not empty.\n      -S FILE        True if file is a socket.\n      -t FD          True if FD is opened on a terminal.\n      -u FILE        True if the file is set-user-id.\n      -w FILE        True if the file is writable by you.\n      -x FILE        True if the file is executable by you.\n      -O FILE        True if the file is effectively owned by you.\n      -G FILE        True if the file is effectively owned by your group.\n      -N FILE        True if the file has been modified since it was last read.\n\n      FILE1 -nt FILE2  True if file1 is newer than file2 (according to\n                       modification date).\n\n      FILE1 -ot FILE2  True if file1 is older than file2.\n\n      FILE1 -ef FILE2  True if file1 is a hard link to file2.\n\n    All file operators except -h and -L are acting on the target of a symbolic\n    link, not on the symlink itself, if FILE is a symbolic link.\n\n    String operators:\n\n      -z STRING      True if string is empty.\n\n      -n STRING\n         STRING      True if string is not empty.\n\n      STRING1 = STRING2\n                     True if the strings are equal.\n      STRING1 != STRING2\n                     True if the strings are not equal.\n      STRING1 \n STRING2\n                     True if STRING1 sorts before STRING2 lexicographically.\n      STRING1 \n STRING2\n                     True if STRING1 sorts after STRING2 lexicographically.\n\n    Other operators:\n\n      -o OPTION      True if the shell option OPTION is enabled.\n      -v VAR     True if the shell variable VAR is set\n      -R VAR     True if the shell variable VAR is set and is a name reference.\n      ! EXPR         True if expr is false.\n      EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.\n      EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.\n\n      arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,\n                     -lt, -le, -gt, or -ge.\n\n    Arithmetic binary operators return true if ARG1 is equal, not-equal,\n    less-than, less-than-or-equal, greater-than, or greater-than-or-equal\n    than ARG2.\n\n    See the bash manual page bash(1) for the handling of parameters (i.e.\n    missing parameters).\n\n    Exit Status:\n    Returns success if EXPR evaluates to true; fails if EXPR evaluates to\n    false or an invalid argument is given.",
+            "title": "test"
+        },
+        {
+            "location": "/content/help/test/#shell-builtin-command-test",
+            "text": "",
+            "title": "Shell Builtin Command \u300ctest\u300d"
+        },
+        {
+            "location": "/content/help/test/#type-test",
+            "text": "\u57f7\u884c  $ type test  \u986f\u793a  test is a shell builtin",
+            "title": "type test"
+        },
+        {
+            "location": "/content/help/test/#help-test",
+            "text": "\u57f7\u884c  $ help test  \u986f\u793a  test: test [expr]\n    Evaluate conditional expression.\n\n    Exits with a status of 0 (true) or 1 (false) depending on\n    the evaluation of EXPR.  Expressions may be unary or binary.  Unary\n    expressions are often used to examine the status of a file.  There\n    are string operators and numeric comparison operators as well.\n\n    The behavior of test depends on the number of arguments.  Read the\n    bash manual page for the complete specification.\n\n    File operators:\n\n      -a FILE        True if file exists.\n      -b FILE        True if file is block special.\n      -c FILE        True if file is character special.\n      -d FILE        True if file is a directory.\n      -e FILE        True if file exists.\n      -f FILE        True if file exists and is a regular file.\n      -g FILE        True if file is set-group-id.\n      -h FILE        True if file is a symbolic link.\n      -L FILE        True if file is a symbolic link.\n      -k FILE        True if file has its `sticky' bit set.\n      -p FILE        True if file is a named pipe.\n      -r FILE        True if file is readable by you.\n      -s FILE        True if file exists and is not empty.\n      -S FILE        True if file is a socket.\n      -t FD          True if FD is opened on a terminal.\n      -u FILE        True if the file is set-user-id.\n      -w FILE        True if the file is writable by you.\n      -x FILE        True if the file is executable by you.\n      -O FILE        True if the file is effectively owned by you.\n      -G FILE        True if the file is effectively owned by your group.\n      -N FILE        True if the file has been modified since it was last read.\n\n      FILE1 -nt FILE2  True if file1 is newer than file2 (according to\n                       modification date).\n\n      FILE1 -ot FILE2  True if file1 is older than file2.\n\n      FILE1 -ef FILE2  True if file1 is a hard link to file2.\n\n    All file operators except -h and -L are acting on the target of a symbolic\n    link, not on the symlink itself, if FILE is a symbolic link.\n\n    String operators:\n\n      -z STRING      True if string is empty.\n\n      -n STRING\n         STRING      True if string is not empty.\n\n      STRING1 = STRING2\n                     True if the strings are equal.\n      STRING1 != STRING2\n                     True if the strings are not equal.\n      STRING1   STRING2\n                     True if STRING1 sorts before STRING2 lexicographically.\n      STRING1   STRING2\n                     True if STRING1 sorts after STRING2 lexicographically.\n\n    Other operators:\n\n      -o OPTION      True if the shell option OPTION is enabled.\n      -v VAR     True if the shell variable VAR is set\n      -R VAR     True if the shell variable VAR is set and is a name reference.\n      ! EXPR         True if expr is false.\n      EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.\n      EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.\n\n      arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,\n                     -lt, -le, -gt, or -ge.\n\n    Arithmetic binary operators return true if ARG1 is equal, not-equal,\n    less-than, less-than-or-equal, greater-than, or greater-than-or-equal\n    than ARG2.\n\n    See the bash manual page bash(1) for the handling of parameters (i.e.\n    missing parameters).\n\n    Exit Status:\n    Returns success if EXPR evaluates to true; fails if EXPR evaluates to\n    false or an invalid argument is given.",
+            "title": "help test"
+        },
+        {
+            "location": "/content/help/square_brackets/",
+            "text": "Shell Builtin Command \u300c[\u300d\n\n\ntype [\n\n\n\u57f7\u884c\n\n\n$ type [\n\n\n\n\n\u986f\u793a\n\n\n[ is a shell builtin\n\n\n\n\nhelp [\n\n\n\u57f7\u884c\n\n\n$ help [\n\n\n\n\n\u986f\u793a\n\n\n[: [ arg... ]\n    Evaluate conditional expression.\n\n    This is a synonym for the \ntest\n builtin, but the last argument must\n    be a literal `]', to match the opening `['.",
+            "title": "["
+        },
+        {
+            "location": "/content/help/square_brackets/#shell-builtin-command",
+            "text": "",
+            "title": "Shell Builtin Command \u300c[\u300d"
+        },
+        {
+            "location": "/content/help/square_brackets/#type",
+            "text": "\u57f7\u884c  $ type [  \u986f\u793a  [ is a shell builtin",
+            "title": "type ["
+        },
+        {
+            "location": "/content/help/square_brackets/#help",
+            "text": "\u57f7\u884c  $ help [  \u986f\u793a  [: [ arg... ]\n    Evaluate conditional expression.\n\n    This is a synonym for the  test  builtin, but the last argument must\n    be a literal `]', to match the opening `['.",
+            "title": "help ["
+        },
+        {
             "location": "/content/help/if/",
             "text": "Shell Keyword \u300cif\u300d\n\n\ntype if\n\n\n\u57f7\u884c\n\n\n$ type if\n\n\n\n\n\u986f\u793a\n\n\nif is a shell keyword\n\n\n\n\nhelp if\n\n\n\u57f7\u884c\n\n\n$ help if\n\n\n\n\n\u986f\u793a\n\n\nif: if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... [ else COMMANDS; ] fi\n    Execute commands based on conditional.\n\n    The `if COMMANDS' list is executed.  If its exit status is zero, then the\n    `then COMMANDS' list is executed.  Otherwise, each `elif COMMANDS' list is\n    executed in turn, and if its exit status is zero, the corresponding\n    `then COMMANDS' list is executed and the if command completes.  Otherwise,\n    the `else COMMANDS' list is executed, if present.  The exit status of the\n    entire construct is the exit status of the last command executed, or zero\n    if no condition tested true.\n\n    Exit Status:\n    Returns the status of the last command executed.\n\n\n\n\n\u7bc4\u4f8b 001\n\n\nif true; then :; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif true; then\n    :;\nfi\n\n\n\n\n\u7bc4\u4f8b 002\n\n\nif true; then echo 'yes'; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif true; then\n    echo 'yes';\nfi\n\n\n\n\n\u986f\u793a\n\n\nyes\n\n\n\n\n\u7bc4\u4f8b 003\n\n\nif false; then echo 'm1'; else echo 'm2'; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif false; then\n    echo 'm1';\nelse\n    echo 'm2';\nfi\n\n\n\n\n\u7bc4\u4f8b 004\n\n\nif false; then echo 'm1'; elif true; then echo 'm2'; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif false; then\n    echo 'm1';\nelif true; then\n    echo 'm2';\nfi\n\n\n\n\n\u7bc4\u4f8b 005\n\n\nif false; then echo 'm1'; elif false; then echo 'm2'; else echo 'm3'; fi\n\n\n\n\n\u5beb\u6210\u591a\u884c\n\n\nif false; then\n    echo 'm1';\nelif false; then\n    echo 'm2';\nelse\n    echo 'm3'; \nfi",
             "title": "if"
@@ -456,46 +496,6 @@
             "title": "\u7bc4\u4f8b 005"
         },
         {
-            "location": "/content/help/square_brackets/",
-            "text": "Shell Builtin Command \u300c[\u300d\n\n\ntype [\n\n\n\u57f7\u884c\n\n\n$ type [\n\n\n\n\n\u986f\u793a\n\n\n[ is a shell builtin\n\n\n\n\nhelp [\n\n\n\u57f7\u884c\n\n\n$ help [\n\n\n\n\n\u986f\u793a\n\n\n[: [ arg... ]\n    Evaluate conditional expression.\n\n    This is a synonym for the \ntest\n builtin, but the last argument must\n    be a literal `]', to match the opening `['.",
-            "title": "["
-        },
-        {
-            "location": "/content/help/square_brackets/#shell-builtin-command",
-            "text": "",
-            "title": "Shell Builtin Command \u300c[\u300d"
-        },
-        {
-            "location": "/content/help/square_brackets/#type",
-            "text": "\u57f7\u884c  $ type [  \u986f\u793a  [ is a shell builtin",
-            "title": "type ["
-        },
-        {
-            "location": "/content/help/square_brackets/#help",
-            "text": "\u57f7\u884c  $ help [  \u986f\u793a  [: [ arg... ]\n    Evaluate conditional expression.\n\n    This is a synonym for the  test  builtin, but the last argument must\n    be a literal `]', to match the opening `['.",
-            "title": "help ["
-        },
-        {
-            "location": "/content/help/test/",
-            "text": "Shell Builtin Command \u300ctest\u300d\n\n\ntype test\n\n\n\u57f7\u884c\n\n\n$ type test\n\n\n\n\n\u986f\u793a\n\n\ntest is a shell builtin\n\n\n\n\nhelp test\n\n\n\u57f7\u884c\n\n\n$ help test\n\n\n\n\n\u986f\u793a\n\n\ntest: test [expr]\n    Evaluate conditional expression.\n\n    Exits with a status of 0 (true) or 1 (false) depending on\n    the evaluation of EXPR.  Expressions may be unary or binary.  Unary\n    expressions are often used to examine the status of a file.  There\n    are string operators and numeric comparison operators as well.\n\n    The behavior of test depends on the number of arguments.  Read the\n    bash manual page for the complete specification.\n\n    File operators:\n\n      -a FILE        True if file exists.\n      -b FILE        True if file is block special.\n      -c FILE        True if file is character special.\n      -d FILE        True if file is a directory.\n      -e FILE        True if file exists.\n      -f FILE        True if file exists and is a regular file.\n      -g FILE        True if file is set-group-id.\n      -h FILE        True if file is a symbolic link.\n      -L FILE        True if file is a symbolic link.\n      -k FILE        True if file has its `sticky' bit set.\n      -p FILE        True if file is a named pipe.\n      -r FILE        True if file is readable by you.\n      -s FILE        True if file exists and is not empty.\n      -S FILE        True if file is a socket.\n      -t FD          True if FD is opened on a terminal.\n      -u FILE        True if the file is set-user-id.\n      -w FILE        True if the file is writable by you.\n      -x FILE        True if the file is executable by you.\n      -O FILE        True if the file is effectively owned by you.\n      -G FILE        True if the file is effectively owned by your group.\n      -N FILE        True if the file has been modified since it was last read.\n\n      FILE1 -nt FILE2  True if file1 is newer than file2 (according to\n                       modification date).\n\n      FILE1 -ot FILE2  True if file1 is older than file2.\n\n      FILE1 -ef FILE2  True if file1 is a hard link to file2.\n\n    All file operators except -h and -L are acting on the target of a symbolic\n    link, not on the symlink itself, if FILE is a symbolic link.\n\n    String operators:\n\n      -z STRING      True if string is empty.\n\n      -n STRING\n         STRING      True if string is not empty.\n\n      STRING1 = STRING2\n                     True if the strings are equal.\n      STRING1 != STRING2\n                     True if the strings are not equal.\n      STRING1 \n STRING2\n                     True if STRING1 sorts before STRING2 lexicographically.\n      STRING1 \n STRING2\n                     True if STRING1 sorts after STRING2 lexicographically.\n\n    Other operators:\n\n      -o OPTION      True if the shell option OPTION is enabled.\n      -v VAR     True if the shell variable VAR is set\n      -R VAR     True if the shell variable VAR is set and is a name reference.\n      ! EXPR         True if expr is false.\n      EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.\n      EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.\n\n      arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,\n                     -lt, -le, -gt, or -ge.\n\n    Arithmetic binary operators return true if ARG1 is equal, not-equal,\n    less-than, less-than-or-equal, greater-than, or greater-than-or-equal\n    than ARG2.\n\n    See the bash manual page bash(1) for the handling of parameters (i.e.\n    missing parameters).\n\n    Exit Status:\n    Returns success if EXPR evaluates to true; fails if EXPR evaluates to\n    false or an invalid argument is given.",
-            "title": "test"
-        },
-        {
-            "location": "/content/help/test/#shell-builtin-command-test",
-            "text": "",
-            "title": "Shell Builtin Command \u300ctest\u300d"
-        },
-        {
-            "location": "/content/help/test/#type-test",
-            "text": "\u57f7\u884c  $ type test  \u986f\u793a  test is a shell builtin",
-            "title": "type test"
-        },
-        {
-            "location": "/content/help/test/#help-test",
-            "text": "\u57f7\u884c  $ help test  \u986f\u793a  test: test [expr]\n    Evaluate conditional expression.\n\n    Exits with a status of 0 (true) or 1 (false) depending on\n    the evaluation of EXPR.  Expressions may be unary or binary.  Unary\n    expressions are often used to examine the status of a file.  There\n    are string operators and numeric comparison operators as well.\n\n    The behavior of test depends on the number of arguments.  Read the\n    bash manual page for the complete specification.\n\n    File operators:\n\n      -a FILE        True if file exists.\n      -b FILE        True if file is block special.\n      -c FILE        True if file is character special.\n      -d FILE        True if file is a directory.\n      -e FILE        True if file exists.\n      -f FILE        True if file exists and is a regular file.\n      -g FILE        True if file is set-group-id.\n      -h FILE        True if file is a symbolic link.\n      -L FILE        True if file is a symbolic link.\n      -k FILE        True if file has its `sticky' bit set.\n      -p FILE        True if file is a named pipe.\n      -r FILE        True if file is readable by you.\n      -s FILE        True if file exists and is not empty.\n      -S FILE        True if file is a socket.\n      -t FD          True if FD is opened on a terminal.\n      -u FILE        True if the file is set-user-id.\n      -w FILE        True if the file is writable by you.\n      -x FILE        True if the file is executable by you.\n      -O FILE        True if the file is effectively owned by you.\n      -G FILE        True if the file is effectively owned by your group.\n      -N FILE        True if the file has been modified since it was last read.\n\n      FILE1 -nt FILE2  True if file1 is newer than file2 (according to\n                       modification date).\n\n      FILE1 -ot FILE2  True if file1 is older than file2.\n\n      FILE1 -ef FILE2  True if file1 is a hard link to file2.\n\n    All file operators except -h and -L are acting on the target of a symbolic\n    link, not on the symlink itself, if FILE is a symbolic link.\n\n    String operators:\n\n      -z STRING      True if string is empty.\n\n      -n STRING\n         STRING      True if string is not empty.\n\n      STRING1 = STRING2\n                     True if the strings are equal.\n      STRING1 != STRING2\n                     True if the strings are not equal.\n      STRING1   STRING2\n                     True if STRING1 sorts before STRING2 lexicographically.\n      STRING1   STRING2\n                     True if STRING1 sorts after STRING2 lexicographically.\n\n    Other operators:\n\n      -o OPTION      True if the shell option OPTION is enabled.\n      -v VAR     True if the shell variable VAR is set\n      -R VAR     True if the shell variable VAR is set and is a name reference.\n      ! EXPR         True if expr is false.\n      EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.\n      EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.\n\n      arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,\n                     -lt, -le, -gt, or -ge.\n\n    Arithmetic binary operators return true if ARG1 is equal, not-equal,\n    less-than, less-than-or-equal, greater-than, or greater-than-or-equal\n    than ARG2.\n\n    See the bash manual page bash(1) for the handling of parameters (i.e.\n    missing parameters).\n\n    Exit Status:\n    Returns success if EXPR evaluates to true; fails if EXPR evaluates to\n    false or an invalid argument is given.",
-            "title": "help test"
-        },
-        {
             "location": "/content/subject/exit-status/special_parameters/",
             "text": "$?\n\n\n\u7bc4\u4f8b\n\n\n\u57f7\u884c\n\n\n$ true\n\n\n\n\n\u63a5\u8457\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\n\u57f7\u884c\n\n\n$ false\n\n\n\n\n\u63a5\u8457\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1\n\n\n\n\n\u6587\u4ef6\u8aaa\u660e\n\n\n$ man \nbash\n\n\n\u53ef\u4ee5\u627e\u5230\u4e0b\u9762\u9019\u4e00\u6bb5\u8aaa\u660e\n\n\nSpecial Parameters\n    The shell treats several parameters specially.  These parameters may only be referenced; assignment to them  is\n    not allowed.\n...\u7565...\n    ?      Expands to the exit status of the most recently executed foreground pipeline.\n\n...\u7565...\n\n\n\n\n\u6216\u662f\u5728\n\n\nBash Reference Manual / 3 Basic Shell Features / 3.4 Shell Parameters / \n3.4.2 Special Parameters\n\n\n\u53ef\u4ee5\u627e\u5230\u4e0b\u9762\u9019\u4e00\u6bb5\u8aaa\u660e\n\n\n?\n\n    ($?) Expands to the exit status of the most recently executed foreground pipeline.\n\n\n\n\n\u66f4\u591a\u7bc4\u4f8b\u548c\u8aaa\u660e\u8acb\u53c3\u8003\n\n\n\n\nhelp \n:\n\n\nhelp \ntrue\n\n\nhelp \nfalse\n\n\nhelp \necho",
             "title": "$?"
@@ -534,6 +534,46 @@
             "location": "/content/subject/exit-status/return/#return",
             "text": "help  return",
             "title": "return"
+        },
+        {
+            "location": "/content/subject/exit-status/test/",
+            "text": "test\n\n\nhelp\n\n\n\n\nhelp \ntest\n\n\nhelp \n[\n\n\n\n\n\u4e8b\u524d\u6e96\u5099\n\n\n\u6e96\u5099\u4e00\u500b\u300cREADME.md\u300d\u6a94\n\n\n$ touch README.md\n\n\n\n\n\u7bc4\u4f8b 001\n\n\n\u57f7\u884c\n\n\n$ test -f README.md\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\n\u7bc4\u4f8b 002\n\n\n\u57f7\u884c\n\n\n$ test -f Makefile\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1\n\n\n\n\n\u7bc4\u4f8b 003\n\n\n\u57f7\u884c\n\n\n$ [ -f README.md ]\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\n\u7bc4\u4f8b 004\n\n\n\u57f7\u884c\n\n\n$ [ -f Makefile ]\n\n\n\n\n\u518d\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1",
+            "title": "test"
+        },
+        {
+            "location": "/content/subject/exit-status/test/#test",
+            "text": "",
+            "title": "test"
+        },
+        {
+            "location": "/content/subject/exit-status/test/#help",
+            "text": "help  test  help  [",
+            "title": "help"
+        },
+        {
+            "location": "/content/subject/exit-status/test/#_1",
+            "text": "\u6e96\u5099\u4e00\u500b\u300cREADME.md\u300d\u6a94  $ touch README.md",
+            "title": "\u4e8b\u524d\u6e96\u5099"
+        },
+        {
+            "location": "/content/subject/exit-status/test/#001",
+            "text": "\u57f7\u884c  $ test -f README.md  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  0",
+            "title": "\u7bc4\u4f8b 001"
+        },
+        {
+            "location": "/content/subject/exit-status/test/#002",
+            "text": "\u57f7\u884c  $ test -f Makefile  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  1",
+            "title": "\u7bc4\u4f8b 002"
+        },
+        {
+            "location": "/content/subject/exit-status/test/#003",
+            "text": "\u57f7\u884c  $ [ -f README.md ]  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  0",
+            "title": "\u7bc4\u4f8b 003"
+        },
+        {
+            "location": "/content/subject/exit-status/test/#004",
+            "text": "\u57f7\u884c  $ [ -f Makefile ]  \u518d\u57f7\u884c  $ echo $?  \u986f\u793a  1",
+            "title": "\u7bc4\u4f8b 004"
         },
         {
             "location": "/content/subject/exit-status/if/",
