@@ -496,6 +496,26 @@
             "title": "\u7bc4\u4f8b 005"
         },
         {
+            "location": "/content/help/for/",
+            "text": "Shell keyword \u300cfor\u300d\n\n\ntype for\n\n\n\u57f7\u884c\n\n\n$ type for\n\n\n\n\n\u986f\u793a\n\n\nfor is a shell keyword\n\n\n\n\nhelp for\n\n\n\u57f7\u884c\n\n\n$ help for\n\n\n\n\n\u986f\u793a\n\n\nfor: for NAME [in WORDS ... ] ; do COMMANDS; done\n    Execute commands for each member in a list.\n\n    The `for' loop executes a sequence of commands for each member in a\n    list of items.  If `in WORDS ...;' is not present, then `in \n$@\n' is\n    assumed.  For each element in WORDS, NAME is set to that element, and\n    the COMMANDS are executed.\n\n    Exit Status:\n    Returns the status of the last command executed.",
+            "title": "for"
+        },
+        {
+            "location": "/content/help/for/#shell-keyword-for",
+            "text": "",
+            "title": "Shell keyword \u300cfor\u300d"
+        },
+        {
+            "location": "/content/help/for/#type-for",
+            "text": "\u57f7\u884c  $ type for  \u986f\u793a  for is a shell keyword",
+            "title": "type for"
+        },
+        {
+            "location": "/content/help/for/#help-for",
+            "text": "\u57f7\u884c  $ help for  \u986f\u793a  for: for NAME [in WORDS ... ] ; do COMMANDS; done\n    Execute commands for each member in a list.\n\n    The `for' loop executes a sequence of commands for each member in a\n    list of items.  If `in WORDS ...;' is not present, then `in  $@ ' is\n    assumed.  For each element in WORDS, NAME is set to that element, and\n    the COMMANDS are executed.\n\n    Exit Status:\n    Returns the status of the last command executed.",
+            "title": "help for"
+        },
+        {
             "location": "/content/subject/exit-status/special_parameters/",
             "text": "$?\n\n\n\u7bc4\u4f8b\n\n\n\u57f7\u884c\n\n\n$ true\n\n\n\n\n\u63a5\u8457\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n0\n\n\n\n\n\u57f7\u884c\n\n\n$ false\n\n\n\n\n\u63a5\u8457\u57f7\u884c\n\n\n$ echo $?\n\n\n\n\n\u986f\u793a\n\n\n1\n\n\n\n\n\u6587\u4ef6\u8aaa\u660e\n\n\n$ man \nbash\n\n\n\u53ef\u4ee5\u627e\u5230\u4e0b\u9762\u9019\u4e00\u6bb5\u8aaa\u660e\n\n\nSpecial Parameters\n    The shell treats several parameters specially.  These parameters may only be referenced; assignment to them  is\n    not allowed.\n...\u7565...\n    ?      Expands to the exit status of the most recently executed foreground pipeline.\n\n...\u7565...\n\n\n\n\n\u6216\u662f\u5728\n\n\nBash Reference Manual / 3 Basic Shell Features / 3.4 Shell Parameters / \n3.4.2 Special Parameters\n\n\n\u53ef\u4ee5\u627e\u5230\u4e0b\u9762\u9019\u4e00\u6bb5\u8aaa\u660e\n\n\n?\n\n    ($?) Expands to the exit status of the most recently executed foreground pipeline.\n\n\n\n\n\u66f4\u591a\u7bc4\u4f8b\u548c\u8aaa\u660e\u8acb\u53c3\u8003\n\n\n\n\nhelp \n:\n\n\nhelp \ntrue\n\n\nhelp \nfalse\n\n\nhelp \necho",
             "title": "$?"

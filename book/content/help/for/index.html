@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>exit - GNU Bash 學習筆記</title>
+        <title>for - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/exit/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/for/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/exit/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/for/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/help/exit//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/help/for//../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -97,7 +97,7 @@
             
           </span>
         
-        exit
+        for
       </div>
     </div>
     
@@ -293,36 +293,9 @@
       
         
   <li>
-    <a class="current" title="exit" href="./">
+    <a class="" title="exit" href="../exit/">
       exit
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="type exit" href="#type-exit">
-                type exit
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="help exit" href="#help-exit">
-                help exit
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Exit Status" href="#exit-status">
-                Exit Status
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -365,9 +338,30 @@
       
         
   <li>
-    <a class="" title="for" href="../for/">
+    <a class="current" title="for" href="./">
       for
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="type for" href="#type-for">
+                type for
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="help for" href="#help-for">
+                help for
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -508,126 +502,32 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="shell-builtin-command-exit">Shell Builtin Command 「exit」</h1>
-<h2 id="type-exit">type exit</h2>
+          <h1 id="shell-keyword-for">Shell keyword 「for」</h1>
+<h2 id="type-for">type for</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type exit</code></pre>
+<pre class="code"><code class="language-sh">$ type for</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>exit is a shell builtin</code></pre>
+<pre class="code"><code>for is a shell keyword</code></pre>
 
 
-<h2 id="help-exit">help exit</h2>
+<h2 id="help-for">help for</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ help exit</code></pre>
+<pre class="code"><code class="language-sh">$ help for</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>exit: exit [n]
-    Exit the shell.
+<pre class="code"><code>for: for NAME [in WORDS ... ] ; do COMMANDS; done
+    Execute commands for each member in a list.
 
-    Exits the shell with a status of N.  If N is omitted, the exit status
-    is that of the last command executed.</code></pre>
+    The `for' loop executes a sequence of commands for each member in a
+    list of items.  If `in WORDS ...;' is not present, then `in &quot;$@&quot;' is
+    assumed.  For each element in WORDS, NAME is set to that element, and
+    the COMMANDS are executed.
 
-
-<h2 id="exit-status">Exit Status</h2>
-<h3 id="exit-0">exit 0</h3>
-<p>exit_0.sh</p>
-<pre class="code"><code class="language-sh">#!/usr/bin/env bash
-
-exit 0</code></pre>
-
-
-<p>設為可執行</p>
-<pre class="code"><code class="language-sh">$ chmod u+x ./exit_0.sh</code></pre>
-
-
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ ./exit_0.sh</code></pre>
-
-
-<p>沒有任何顯示，直接換下一個提示字元</p>
-<p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>0</code></pre>
-
-
-<h3 id="exit-1">exit 1</h3>
-<p>exit_1.sh</p>
-<pre class="code"><code class="language-sh">#!/usr/bin/env bash
-
-exit 1</code></pre>
-
-
-<p>設為可執行</p>
-<pre class="code"><code class="language-sh">$ chmod u+x ./exit_1.sh</code></pre>
-
-
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ ./exit_1.sh</code></pre>
-
-
-<p>沒有任何顯示，直接換下一個提示字元</p>
-<p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>1</code></pre>
-
-
-<h3 id="exit">exit</h3>
-<p>exit.sh</p>
-<pre class="code"><code class="language-sh">#!/usr/bin/env bash
-
-exit</code></pre>
-
-
-<p>設為可執行</p>
-<pre class="code"><code class="language-sh">$ chmod u+x ./exit.sh</code></pre>
-
-
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ ./exit.sh</code></pre>
-
-
-<p>沒有任何顯示，直接換下一個提示字元</p>
-<p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>0</code></pre>
-
-
-<h3 id="exit-last">exit last</h3>
-<p>exit_last.sh</p>
-<pre class="code"><code class="language-sh">#!/usr/bin/env bash
-
-false
-
-exit</code></pre>
-
-
-<p>設為可執行</p>
-<pre class="code"><code class="language-sh">$ chmod u+x ./exit_last.sh</code></pre>
-
-
-<p>執行</p>
-<pre class="code"><code class="language-sh">$ ./exit_last.sh</code></pre>
-
-
-<p>沒有任何顯示，直接換下一個提示字元</p>
-<p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>1</code></pre>
+    Exit Status:
+    Returns the status of the last command executed.</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -646,7 +546,7 @@ exit</code></pre>
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../echo/" title="echo">
+        <a href="../if/" title="if">
           <span class="direction">
             上一頁
           </span>
@@ -656,7 +556,7 @@ exit</code></pre>
             </div>
             <div class="stretch">
               <div class="title">
-                echo
+                if
               </div>
             </div>
           </div>
@@ -665,14 +565,14 @@ exit</code></pre>
     </div>
     <div class="next">
       
-        <a href="../return/" title="return">
+        <a href="../../subject/exit-status/special_parameters/" title="$?">
           <span class="direction">
             下一頁
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                return
+                $?
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
