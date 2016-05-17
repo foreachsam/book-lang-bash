@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>test - GNU Bash 學習筆記</title>
+        <title>trap - GNU Bash 學習筆記</title>
       
       
       
-        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/test/">
+        <link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/trap/">
       
       
         <meta name="author" content="foreachsam">
       
     
-    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/test/">
+    <meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/trap/">
     <meta property="og:title" content="GNU Bash 學習筆記">
-    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/help/test//../../../">
+    <meta property="og:image" content="https://foreachsam.github.io/book-lang-bash/book/content/help/trap//../../../">
     <meta name="apple-mobile-web-app-title" content="GNU Bash 學習筆記">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -97,7 +97,7 @@
             
           </span>
         
-        test
+        trap
       </div>
     </div>
     
@@ -311,30 +311,9 @@
       
         
   <li>
-    <a class="current" title="test" href="./">
+    <a class="" title="test" href="../test/">
       test
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="type test" href="#type-test">
-                type test
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="help test" href="#help-test">
-                help test
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
@@ -377,9 +356,54 @@
       
         
   <li>
-    <a class="" title="trap" href="../trap/">
+    <a class="current" title="trap" href="./">
       trap
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="type trap" href="#type-trap">
+                type trap
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="help trap" href="#help-trap">
+                help trap
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例001" href="#001">
+                範例001
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例002" href="#002">
+                範例002
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例003" href="#003">
+                範例003
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="範例004" href="#004">
+                範例004
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -520,105 +544,231 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="shell-builtin-command-test">Shell Builtin Command 「test」</h1>
-<h2 id="type-test">type test</h2>
+          <h1 id="shell-keyword-trap">Shell keyword 「trap」</h1>
+<h2 id="type-trap">type trap</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type test</code></pre>
+<pre class="code"><code class="language-sh">$ type trap</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>test is a shell builtin</code></pre>
+<pre class="code"><code>trap is a shell builtin</code></pre>
 
 
-<h2 id="help-test">help test</h2>
+<h2 id="help-trap">help trap</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ help test</code></pre>
+<pre class="code"><code class="language-sh">$ help trap</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>test: test [expr]
-    Evaluate conditional expression.
+<pre class="code"><code>trap: trap [-lp] [[arg] signal_spec ...]
+    Trap signals and other events.
 
-    Exits with a status of 0 (true) or 1 (false) depending on
-    the evaluation of EXPR.  Expressions may be unary or binary.  Unary
-    expressions are often used to examine the status of a file.  There
-    are string operators and numeric comparison operators as well.
+    Defines and activates handlers to be run when the shell receives signals
+    or other conditions.
 
-    The behavior of test depends on the number of arguments.  Read the
-    bash manual page for the complete specification.
+    ARG is a command to be read and executed when the shell receives the
+    signal(s) SIGNAL_SPEC.  If ARG is absent (and a single SIGNAL_SPEC
+    is supplied) or `-', each specified signal is reset to its original
+    value.  If ARG is the null string each SIGNAL_SPEC is ignored by the
+    shell and by the commands it invokes.
 
-    File operators:
+    If a SIGNAL_SPEC is EXIT (0) ARG is executed on exit from the shell.  If
+    a SIGNAL_SPEC is DEBUG, ARG is executed before every simple command.  If
+    a SIGNAL_SPEC is RETURN, ARG is executed each time a shell function or a
+    script run by the . or source builtins finishes executing.  A SIGNAL_SPEC
+    of ERR means to execute ARG each time a command's failure would cause the
+    shell to exit when the -e option is enabled.
 
-      -a FILE        True if file exists.
-      -b FILE        True if file is block special.
-      -c FILE        True if file is character special.
-      -d FILE        True if file is a directory.
-      -e FILE        True if file exists.
-      -f FILE        True if file exists and is a regular file.
-      -g FILE        True if file is set-group-id.
-      -h FILE        True if file is a symbolic link.
-      -L FILE        True if file is a symbolic link.
-      -k FILE        True if file has its `sticky' bit set.
-      -p FILE        True if file is a named pipe.
-      -r FILE        True if file is readable by you.
-      -s FILE        True if file exists and is not empty.
-      -S FILE        True if file is a socket.
-      -t FD          True if FD is opened on a terminal.
-      -u FILE        True if the file is set-user-id.
-      -w FILE        True if the file is writable by you.
-      -x FILE        True if the file is executable by you.
-      -O FILE        True if the file is effectively owned by you.
-      -G FILE        True if the file is effectively owned by your group.
-      -N FILE        True if the file has been modified since it was last read.
+    If no arguments are supplied, trap prints the list of commands associated
+    with each signal.
 
-      FILE1 -nt FILE2  True if file1 is newer than file2 (according to
-                       modification date).
+    Options:
+      -l    print a list of signal names and their corresponding numbers
+      -p    display the trap commands associated with each SIGNAL_SPEC
 
-      FILE1 -ot FILE2  True if file1 is older than file2.
-
-      FILE1 -ef FILE2  True if file1 is a hard link to file2.
-
-    All file operators except -h and -L are acting on the target of a symbolic
-    link, not on the symlink itself, if FILE is a symbolic link.
-
-    String operators:
-
-      -z STRING      True if string is empty.
-
-      -n STRING
-         STRING      True if string is not empty.
-
-      STRING1 = STRING2
-                     True if the strings are equal.
-      STRING1 != STRING2
-                     True if the strings are not equal.
-      STRING1 &lt; STRING2
-                     True if STRING1 sorts before STRING2 lexicographically.
-      STRING1 &gt; STRING2
-                     True if STRING1 sorts after STRING2 lexicographically.
-
-    Other operators:
-
-      -o OPTION      True if the shell option OPTION is enabled.
-      -v VAR     True if the shell variable VAR is set
-      -R VAR     True if the shell variable VAR is set and is a name reference.
-      ! EXPR         True if expr is false.
-      EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.
-      EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.
-
-      arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,
-                     -lt, -le, -gt, or -ge.
-
-    Arithmetic binary operators return true if ARG1 is equal, not-equal,
-    less-than, less-than-or-equal, greater-than, or greater-than-or-equal
-    than ARG2.
-
-    See the bash manual page bash(1) for the handling of parameters (i.e.
-    missing parameters).
+    Each SIGNAL_SPEC is either a signal name in &lt;signal.h&gt; or a signal number.
+    Signal names are case insensitive and the SIG prefix is optional.  A
+    signal may be sent to the shell with &quot;kill -signal $$&quot;.
 
     Exit Status:
-    Returns success if EXPR evaluates to true; fails if EXPR evaluates to
-    false or an invalid argument is given.</code></pre>
+    Returns success unless a SIGSPEC is invalid or an invalid option is given.</code></pre>
+
+
+<h2 id="001">範例001</h2>
+<p>執行</p>
+<pre class="code"><code>$ trap -l</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>1) SIGHUP    2) SIGINT   3) SIGQUIT  4) SIGILL   5) SIGTRAP
+6) SIGABRT   7) SIGBUS   8) SIGFPE   9) SIGKILL 10) SIGUSR1
+11) SIGSEGV 12) SIGUSR2 13) SIGPIPE 14) SIGALRM 15) SIGTERM
+16) SIGSTKFLT   17) SIGCHLD 18) SIGCONT 19) SIGSTOP 20) SIGTSTP
+21) SIGTTIN 22) SIGTTOU 23) SIGURG  24) SIGXCPU 25) SIGXFSZ
+26) SIGVTALRM   27) SIGPROF 28) SIGWINCH    29) SIGIO   30) SIGPWR
+31) SIGSYS  34) SIGRTMIN    35) SIGRTMIN+1  36) SIGRTMIN+2  37) SIGRTMIN+3
+38) SIGRTMIN+4  39) SIGRTMIN+5  40) SIGRTMIN+6  41) SIGRTMIN+7  42) SIGRTMIN+8
+43) SIGRTMIN+9  44) SIGRTMIN+10 45) SIGRTMIN+11 46) SIGRTMIN+12 47) SIGRTMIN+13
+48) SIGRTMIN+14 49) SIGRTMIN+15 50) SIGRTMAX-14 51) SIGRTMAX-13 52) SIGRTMAX-12
+53) SIGRTMAX-11 54) SIGRTMAX-10 55) SIGRTMAX-9  56) SIGRTMAX-8  57) SIGRTMAX-7
+58) SIGRTMAX-6  59) SIGRTMAX-5  60) SIGRTMAX-4  61) SIGRTMAX-3  62) SIGRTMAX-2
+63) SIGRTMAX-1  64) SIGRTMAX</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code class="language-sh">$ kill -l</code></pre>
+
+
+<h2 id="002">範例002</h2>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ trap -p</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>trap -- '' SIGTSTP
+trap -- '' SIGTTIN
+trap -- '' SIGTTOU</code></pre>
+
+
+<h2 id="003">範例003</h2>
+<p>signal.sh</p>
+<pre class="code"><code class="language-sh">#!/usr/bin/env bash
+
+
+trap &quot;echo got signal!&quot; SIGHUP SIGINT
+
+while true; do
+
+        date;
+
+        sleep 1;
+
+done</code></pre>
+
+
+<p>設定可執行</p>
+<pre class="code"><code class="language-sh">$ chmod u+x signal.sh</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ ./signal.sh</code></pre>
+
+
+<p>另外開啟一個Terminal</p>
+<p>找到剛剛執行的pid</p>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ ps aux | grep signal.sh</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code class="language-sh">$ pgrep -f ./signal.sh</code></pre>
+
+
+<p>可以找到pid，例如</p>
+<pre class="code"><code>15060</code></pre>
+
+
+<p>然後對這個process發送signal</p>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ kill -1 15060</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code class="language-sh">$ kill -2 15060</code></pre>
+
+
+<p>就會在一開始執行 signal.sh 那個 Terminal</p>
+<p>看到</p>
+<pre class="code"><code>got signal!
+Tue May 17 20:47:13 CST 20
+...略...</code></pre>
+
+
+<p>上面的的步驟，也可以直接改成執行下面的指令</p>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ pkill -1 -f ./signal.sh</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code class="language-sh">$ pkill -2 -f ./signal.sh</code></pre>
+
+
+<p>然後執行下面的指令，把剛剛執行的「./signal.sh」關閉</p>
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ pkill -9 -f ./signal.sh</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code>$ kill -9 15060</code></pre>
+
+
+<h2 id="004">範例004</h2>
+<p>server.sh</p>
+<pre class="code"><code class="language-sh">#!/usr/bin/env bash
+
+THE_SIG_HUP=0
+
+handle_signal () {
+        if [ $THE_SIG_HUP = 0 ]; then
+                THE_SIG_HUP=1;
+        else
+
+                THE_SIG_HUP=0;
+        fi
+
+}
+
+trap handle_signal SIGHUP
+
+while true; do
+        #echo $THE_SIG_HUP;
+        if [ $THE_SIG_HUP = 1 ]; then
+                echo 'idle';
+        else
+                date;
+        fi
+
+        sleep 1;
+
+done</code></pre>
+
+
+<p>設定為可執行</p>
+<pre class="code"><code class="language-sh">$ chmod u+x server.sh</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-sh">$ ./server.sh</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>Tue May 17 20:56:44 CST 2016
+Tue May 17 20:56:45 CST 2016
+Tue May 17 20:56:46 CST 2016
+Tue May 17 20:56:47 CST 2016</code></pre>
+
+
+<p>然後執行</p>
+<pre class="code"><code class="language-sh">$ pkill -1 -f ./server.sh</code></pre>
+
+
+<p>就會顯示</p>
+<pre class="code"><code>Tue May 17 20:56:48 CST 2016
+idle
+idle
+...略...</code></pre>
+
+
+<p>然後再執行</p>
+<pre class="code"><code class="language-sh">$ pkill -1 -f ./server.sh</code></pre>
+
+
+<p>就會改成</p>
+<pre class="code"><code>idle
+Tue May 17 20:58:30 CST 2016
+Tue May 17 20:58:31 CST 2016
+Tue May 17 20:58:32 CST 2016
+...略...</code></pre>
           <aside class="copyright" role="note">
             
               Copyright (c) foreachsam &ndash;
@@ -637,7 +787,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../return/" title="return">
+        <a href="../while/" title="while">
           <span class="direction">
             上一頁
           </span>
@@ -647,7 +797,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                return
+                while
               </div>
             </div>
           </div>
@@ -656,14 +806,14 @@
     </div>
     <div class="next">
       
-        <a href="../square_brackets/" title="[">
+        <a href="../../subject/exit-status/special_parameters/" title="$?">
           <span class="direction">
             下一頁
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                [
+                $?
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
