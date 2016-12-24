@@ -476,8 +476,8 @@
 		
 		<li class="anchor" >
 			<div itemscope itemtype="http://schema.org/Article">
-				<a title="搭配 for" href="#for" >
-                	搭配 for
+				<a title="其他範例" href="#_2" >
+                	其他範例
 				</a>
 			</div>
 		</li>
@@ -926,16 +926,72 @@ enable wait</code></pre>
 
 
 <p>恢復到一開始的61筆。</p>
-<h2 id="for">搭配 for</h2>
+<h2 id="_2">其他範例</h2>
+<h3 id="_3">範例一</h3>
 <p>執行</p>
-<pre class="code"><code class="language-sh">for i in $(enable -a | awk '{print $2}'); do
+<pre class="code"><code class="language-bash">for i in $(enable -a | awk '{print $2}'); do
     help $i;
     echo =====================;
 done</code></pre>
 
 
 <p>或是執行</p>
-<pre class="code"><code class="language-sh">for i in $(enable -a | awk '{print $2}'); do help $i; echo =====================; done | less</code></pre>
+<pre class="code"><code class="language-bash">for i in $(enable -a | awk '{print $2}'); do help $i; echo =====================; done | less</code></pre>
+
+
+<p>也可以執行</p>
+<pre class="code"><code class="language-bash">$ help $(enable -a | awk '{print $2}')</code></pre>
+
+
+<h3 id="_4">範例二</h3>
+<p>執行</p>
+<pre class="code"><code class="language-bash">for i in $(enable -a | awk '{print $2}'); do
+    type -a $i;
+    echo =====================;
+done</code></pre>
+
+
+<p>或是執行</p>
+<pre class="code"><code class="language-bash">for i in $(enable -a | awk '{print $2}'); do type -a $i; echo =====================; done | less</code></pre>
+
+
+<p>也可以執行</p>
+<pre class="code"><code class="language-bash">$ type -a $(enable -a | awk '{print $2}')</code></pre>
+
+
+<h3 id="_5">範例三</h3>
+<p>執行</p>
+<pre class="code"><code class="language-bash">for i in $(enable -a | awk '{print $2}'); do
+    c=$(type -a $i | wc -l );
+    if [ &quot;$c&quot; == &quot;2&quot; ]; then type -a $i; echo =====================; fi
+done</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>[ is a shell builtin
+[ is /usr/bin/[
+=====================
+echo is a shell builtin
+echo is /bin/echo
+=====================
+false is a shell builtin
+false is /bin/false
+=====================
+kill is a shell builtin
+kill is /bin/kill
+=====================
+printf is a shell builtin
+printf is /usr/bin/printf
+=====================
+pwd is a shell builtin
+pwd is /bin/pwd
+=====================
+test is a shell builtin
+test is /usr/bin/test
+=====================
+true is a shell builtin
+true is /bin/true
+=====================</code></pre>
 				<aside class="copyright" role="note">
 					 Copyright (c) foreachsam &ndash;  Documentation built with
 					<a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using the
