@@ -820,7 +820,15 @@ enable wait</code></pre>
 
 
 <p>表示「builtin」的「test」被關閉了，改使用「/usr/bin/test」這個檔案(指令)。</p>
-<p>執行</p>
+<p>執行下面指令，列出停用的列表。</p>
+<pre class="code"><code class="language-sh">enable -n</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>enable -n test</code></pre>
+
+
+<p>執行顯示所有的列表。</p>
 <pre class="code"><code class="language-sh">$ enable -a</code></pre>
 
 
@@ -908,7 +916,7 @@ enable wait</code></pre>
 <pre class="code"><code>61</code></pre>
 
 
-<p>恢復到一開始的60筆。</p>
+<p>恢復到一開始的61筆。</p>
 <h2 id="for">搭配 for</h2>
 <p>執行</p>
 <pre class="code"><code class="language-sh">for i in $(enable -a | awk '{print $2}'); do
