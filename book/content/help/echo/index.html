@@ -279,6 +279,19 @@
 			
 <li>
 	<div itemscope itemtype="http://schema.org/Article">
+		<a class="" title="type" href="../type/" itemprop="url">
+			type
+    	</a>
+	</div>
+	
+</li>
+
+
+		
+
+			
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
 		<a class="" title=":" href="../colon/" itemprop="url">
 			:
     	</a>
@@ -648,16 +661,25 @@
 				 <h1 id="shell-builtin-command-echo">Shell Builtin Command 「echo」</h1>
 <h2 id="type-echo">type echo</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type echo</code></pre>
+<pre class="code"><code class="language-bash">$ type echo</code></pre>
 
 
 <p>顯示</p>
 <pre class="code"><code>echo is a shell builtin</code></pre>
 
 
+<p>執行</p>
+<pre class="code"><code class="language-bash">$ type -a echo</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>echo is a shell builtin
+echo is /bin/echo</code></pre>
+
+
 <h2 id="help-echo">help echo</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ help echo</code></pre>
+<pre class="code"><code class="language-bash">$ help echo</code></pre>
 
 
 <p>顯示</p>
@@ -695,7 +717,7 @@
 
 <h2 id="exit-status">Exit Status</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ echo</code></pre>
+<pre class="code"><code class="language-bash">$ echo</code></pre>
 
 
 <p>顯示</p>
@@ -703,7 +725,7 @@
 
 
 <p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
 
 
 <p>顯示</p>

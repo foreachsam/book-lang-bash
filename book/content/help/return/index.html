@@ -279,6 +279,19 @@
 			
 <li>
 	<div itemscope itemtype="http://schema.org/Article">
+		<a class="" title="type" href="../type/" itemprop="url">
+			type
+    	</a>
+	</div>
+	
+</li>
+
+
+		
+
+			
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
 		<a class="" title=":" href="../colon/" itemprop="url">
 			:
     	</a>
@@ -648,7 +661,7 @@
 				 <h1 id="shell-builtin-command-return">Shell Builtin Command 「return」</h1>
 <h2 id="type-return">type return</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type return</code></pre>
+<pre class="code"><code class="language-bash">$ type return</code></pre>
 
 
 <p>顯示</p>
@@ -657,7 +670,7 @@
 
 <h2 id="help-return">help return</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ help return</code></pre>
+<pre class="code"><code class="language-bash">$ help return</code></pre>
 
 
 <p>顯示</p>
@@ -675,7 +688,7 @@
 <h2 id="exit-status">Exit Status</h2>
 <h3 id="interactive">interactive</h3>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ return</code></pre>
+<pre class="code"><code class="language-bash">$ return</code></pre>
 
 
 <p>顯示</p>
@@ -683,7 +696,7 @@
 
 
 <p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
 
 
 <p>顯示</p>
@@ -692,17 +705,17 @@
 
 <h3 id="script-return">script return</h3>
 <p>script_return.sh</p>
-<pre class="code"><code class="language-sh">#!/usr/bin/env bash
+<pre class="code"><code class="language-bash">#!/usr/bin/env bash
 
 return 3;</code></pre>
 
 
 <p>設為可執行</p>
-<pre class="code"><code class="language-sh">$ chmod u+x ./script_return.sh</code></pre>
+<pre class="code"><code class="language-bash">$ chmod u+x ./script_return.sh</code></pre>
 
 
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ ./script_return.sh</code></pre>
+<pre class="code"><code class="language-bash">$ ./script_return.sh</code></pre>
 
 
 <p>顯示</p>
@@ -710,7 +723,7 @@ return 3;</code></pre>
 
 
 <p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
 
 
 <p>顯示</p>
@@ -719,7 +732,7 @@ return 3;</code></pre>
 
 <h3 id="source-return">source return</h3>
 <p>source_return.sh</p>
-<pre class="code"><code class="language-sh">return 3;</code></pre>
+<pre class="code"><code class="language-bash">return 3;</code></pre>
 
 
 <p>call_source.sh</p>
@@ -732,11 +745,11 @@ echo $?</code></pre>
 
 
 <p>「call_source.sh」設為可執行</p>
-<pre class="code"><code class="language-sh">$ chmod u+x ./call_source.sh</code></pre>
+<pre class="code"><code class="language-bash">$ chmod u+x ./call_source.sh</code></pre>
 
 
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ ./call_source.sh</code></pre>
+<pre class="code"><code class="language-bash">$ ./call_source.sh</code></pre>
 
 
 <p>顯示</p>
@@ -744,7 +757,7 @@ echo $?</code></pre>
 
 
 <p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
 
 
 <p>顯示</p>
@@ -753,7 +766,7 @@ echo $?</code></pre>
 
 <h3 id="function-return">function return</h3>
 <p>function_return.sh</p>
-<pre class="code"><code class="language-sh">#!/usr/bin/env bash
+<pre class="code"><code class="language-bash">#!/usr/bin/env bash
 
 function_return () {
     return 3;
@@ -765,11 +778,11 @@ echo $?</code></pre>
 
 
 <p>設為可執行</p>
-<pre class="code"><code class="language-sh">$ chmod u+x ./function_return.sh</code></pre>
+<pre class="code"><code class="language-bash">$ chmod u+x ./function_return.sh</code></pre>
 
 
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ ./function_return.sh</code></pre>
+<pre class="code"><code class="language-bash">$ ./function_return.sh</code></pre>
 
 
 <p>顯示</p>
@@ -777,7 +790,7 @@ echo $?</code></pre>
 
 
 <p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
 
 
 <p>顯示</p>

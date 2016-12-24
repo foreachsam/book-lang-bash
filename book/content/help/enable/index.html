@@ -279,6 +279,19 @@
 			
 <li>
 	<div itemscope itemtype="http://schema.org/Article">
+		<a class="" title="type" href="../type/" itemprop="url">
+			type
+    	</a>
+	</div>
+	
+</li>
+
+
+		
+
+			
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
 		<a class="" title=":" href="../colon/" itemprop="url">
 			:
     	</a>
@@ -664,7 +677,7 @@
 				 <h1 id="shell-builtin-command-enable">Shell Builtin Command 「enable」</h1>
 <h2 id="type-enable">type enable</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type enable</code></pre>
+<pre class="code"><code class="language-bash">$ type enable</code></pre>
 
 
 <p>顯示</p>
@@ -673,7 +686,7 @@
 
 <h2 id="help-enable">help enable</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ help enable</code></pre>
+<pre class="code"><code class="language-bash">$ help enable</code></pre>
 
 
 <p>顯示</p>
@@ -705,7 +718,7 @@
 
 <h2 id="exit-status">Exit Status</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ enable</code></pre>
+<pre class="code"><code class="language-bash">$ enable</code></pre>
 
 
 <p>顯示</p>
@@ -773,7 +786,7 @@ enable wait</code></pre>
 
 
 <p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
 
 
 <p>顯示</p>
@@ -782,7 +795,7 @@ enable wait</code></pre>
 
 <h2 id="_1">執行範例</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type test</code></pre>
+<pre class="code"><code class="language-bash">$ type test</code></pre>
 
 
 <p>顯示</p>
@@ -799,7 +812,7 @@ test is /usr/bin/test</code></pre>
 
 
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ enable | wc -l</code></pre>
+<pre class="code"><code class="language-bash">$ enable | wc -l</code></pre>
 
 
 <p>顯示</p>
@@ -808,11 +821,11 @@ test is /usr/bin/test</code></pre>
 
 <p>表示有61筆。</p>
 <p>執行下面指令，將「test」disable。</p>
-<pre class="code"><code class="language-sh">$ enable -n test</code></pre>
+<pre class="code"><code class="language-bash">$ enable -n test</code></pre>
 
 
 <p>然後再執行</p>
-<pre class="code"><code class="language-sh">$ enable | wc -l</code></pre>
+<pre class="code"><code class="language-bash">$ enable | wc -l</code></pre>
 
 
 <p>顯示</p>
@@ -830,7 +843,7 @@ test is /usr/bin/test</code></pre>
 
 <p>表示「builtin」的「test」被關閉了，改使用「/usr/bin/test」這個檔案(指令)。</p>
 <p>執行下面指令，列出停用的列表。</p>
-<pre class="code"><code class="language-sh">enable -n</code></pre>
+<pre class="code"><code class="language-bash">enable -n</code></pre>
 
 
 <p>顯示</p>
@@ -838,7 +851,7 @@ test is /usr/bin/test</code></pre>
 
 
 <p>執行顯示所有的列表。</p>
-<pre class="code"><code class="language-sh">$ enable -a</code></pre>
+<pre class="code"><code class="language-bash">$ enable -a</code></pre>
 
 
 <p>顯示 (注意中間有一行「enable -n test」)</p>
@@ -906,11 +919,11 @@ enable wait</code></pre>
 
 
 <p>執行下面指令，將「test」這個「builtin」啟用。</p>
-<pre class="code"><code class="language-sh">$ enable test</code></pre>
+<pre class="code"><code class="language-bash">$ enable test</code></pre>
 
 
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type test</code></pre>
+<pre class="code"><code class="language-bash">$ type test</code></pre>
 
 
 <p>顯示</p>
@@ -918,7 +931,7 @@ enable wait</code></pre>
 
 
 <p>然後再執行</p>
-<pre class="code"><code class="language-sh">$ enable | wc -l</code></pre>
+<pre class="code"><code class="language-bash">$ enable | wc -l</code></pre>
 
 
 <p>顯示</p>

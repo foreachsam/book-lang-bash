@@ -11,19 +11,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
 
-<title>trap - GNU Bash 學習筆記</title>
+<title>type - GNU Bash 學習筆記</title>
 
 
-<link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/trap/">
+<link rel="canonical" href="https://foreachsam.github.io/book-lang-bash/book/content/help/type/">
 
 
 <meta name="author" content="foreachsam">
 
 
-<meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/trap/">
-<meta property="og:title" content="trap - GNU Bash 學習筆記">
+<meta property="og:url" content="https://foreachsam.github.io/book-lang-bash/book/content/help/type/">
+<meta property="og:title" content="type - GNU Bash 學習筆記">
 
-<meta name="apple-mobile-web-app-title" content="trap - GNU Bash 學習筆記">
+<meta name="apple-mobile-web-app-title" content="type - GNU Bash 學習筆記">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">  
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../../assets/images/favicon.ico">
@@ -94,7 +94,7 @@
                 help <i class="icon icon-link"></i>
               
             
-          </span>  trap
+          </span>  type
 			</div>
 		</div>
 		  
@@ -279,11 +279,47 @@
 			
 <li>
 	<div itemscope itemtype="http://schema.org/Article">
-		<a class="" title="type" href="../type/" itemprop="url">
+		<a class="current" title="type" href="./" itemprop="url">
 			type
     	</a>
 	</div>
-	
+	    
+	<ul>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="type type" href="#type-type" >
+                	type type
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="help type" href="#help-type" >
+                	help type
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="Exit Status" href="#exit-status" >
+                	Exit Status
+				</a>
+			</div>
+		</li>
+		
+		<li class="anchor" >
+			<div itemscope itemtype="http://schema.org/Article">
+				<a title="執行範例" href="#_1" >
+                	執行範例
+				</a>
+			</div>
+		</li>
+		
+	</ul>
+	 
 </li>
 
 
@@ -435,63 +471,11 @@
 			
 <li>
 	<div itemscope itemtype="http://schema.org/Article">
-		<a class="current" title="trap" href="./" itemprop="url">
+		<a class="" title="trap" href="../trap/" itemprop="url">
 			trap
     	</a>
 	</div>
-	    
-	<ul>
-		
-		<li class="anchor" >
-			<div itemscope itemtype="http://schema.org/Article">
-				<a title="type trap" href="#type-trap" >
-                	type trap
-				</a>
-			</div>
-		</li>
-		
-		<li class="anchor" >
-			<div itemscope itemtype="http://schema.org/Article">
-				<a title="help trap" href="#help-trap" >
-                	help trap
-				</a>
-			</div>
-		</li>
-		
-		<li class="anchor" >
-			<div itemscope itemtype="http://schema.org/Article">
-				<a title="範例001" href="#001" >
-                	範例001
-				</a>
-			</div>
-		</li>
-		
-		<li class="anchor" >
-			<div itemscope itemtype="http://schema.org/Article">
-				<a title="範例002" href="#002" >
-                	範例002
-				</a>
-			</div>
-		</li>
-		
-		<li class="anchor" >
-			<div itemscope itemtype="http://schema.org/Article">
-				<a title="範例003" href="#003" >
-                	範例003
-				</a>
-			</div>
-		</li>
-		
-		<li class="anchor" >
-			<div itemscope itemtype="http://schema.org/Article">
-				<a title="範例004" href="#004" >
-                	範例004
-				</a>
-			</div>
-		</li>
-		
-	</ul>
-	 
+	
 </li>
 
 
@@ -682,231 +666,115 @@
 		</div>
 		<article class="article">
 			<div class="wrapper">
-				 <h1 id="shell-keyword-trap">Shell keyword 「trap」</h1>
-<h2 id="type-trap">type trap</h2>
+				 <h1 id="shell-builtin-command-type">Shell Builtin Command 「type」</h1>
+<h2 id="type-type">type type</h2>
 <p>執行</p>
-<pre class="code"><code class="language-bash">$ type trap</code></pre>
+<pre class="code"><code class="language-bash">$ type type</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>trap is a shell builtin</code></pre>
+<pre class="code"><code>type is a shell builtin</code></pre>
 
 
-<h2 id="help-trap">help trap</h2>
+<h2 id="help-type">help type</h2>
 <p>執行</p>
-<pre class="code"><code class="language-bash">$ help trap</code></pre>
+<pre class="code"><code class="language-bash">$ help type</code></pre>
 
 
 <p>顯示</p>
-<pre class="code"><code>trap: trap [-lp] [[arg] signal_spec ...]
-    Trap signals and other events.
+<pre class="code"><code>type: type [-afptP] name [name ...]
+    Display information about command type.
 
-    Defines and activates handlers to be run when the shell receives signals
-    or other conditions.
-
-    ARG is a command to be read and executed when the shell receives the
-    signal(s) SIGNAL_SPEC.  If ARG is absent (and a single SIGNAL_SPEC
-    is supplied) or `-', each specified signal is reset to its original
-    value.  If ARG is the null string each SIGNAL_SPEC is ignored by the
-    shell and by the commands it invokes.
-
-    If a SIGNAL_SPEC is EXIT (0) ARG is executed on exit from the shell.  If
-    a SIGNAL_SPEC is DEBUG, ARG is executed before every simple command.  If
-    a SIGNAL_SPEC is RETURN, ARG is executed each time a shell function or a
-    script run by the . or source builtins finishes executing.  A SIGNAL_SPEC
-    of ERR means to execute ARG each time a command's failure would cause the
-    shell to exit when the -e option is enabled.
-
-    If no arguments are supplied, trap prints the list of commands associated
-    with each signal.
+    For each NAME, indicate how it would be interpreted if used as a
+    command name.
 
     Options:
-      -l    print a list of signal names and their corresponding numbers
-      -p    display the trap commands associated with each SIGNAL_SPEC
+      -a    display all locations containing an executable named NAME;
+        includes aliases, builtins, and functions, if and only if
+        the `-p' option is not also used
+      -f    suppress shell function lookup
+      -P    force a PATH search for each NAME, even if it is an alias,
+        builtin, or function, and returns the name of the disk file
+        that would be executed
+      -p    returns either the name of the disk file that would be executed,
+        or nothing if `type -t NAME' would not return `file'.
+      -t    output a single word which is one of `alias', `keyword',
+        `function', `builtin', `file' or `', if NAME is an alias, shell
+        reserved word, shell function, shell builtin, disk file, or not
+        found, respectively
 
-    Each SIGNAL_SPEC is either a signal name in &lt;signal.h&gt; or a signal number.
-    Signal names are case insensitive and the SIG prefix is optional.  A
-    signal may be sent to the shell with &quot;kill -signal $$&quot;.
+    Arguments:
+      NAME  Command name to be interpreted.
 
     Exit Status:
-    Returns success unless a SIGSPEC is invalid or an invalid option is given.</code></pre>
+    Returns success if all of the NAMEs are found; fails if any are not found.</code></pre>
 
 
-<h2 id="001">範例001</h2>
+<h2 id="exit-status">Exit Status</h2>
 <p>執行</p>
-<pre class="code"><code>$ trap -l</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>1) SIGHUP    2) SIGINT   3) SIGQUIT  4) SIGILL   5) SIGTRAP
-6) SIGABRT   7) SIGBUS   8) SIGFPE   9) SIGKILL 10) SIGUSR1
-11) SIGSEGV 12) SIGUSR2 13) SIGPIPE 14) SIGALRM 15) SIGTERM
-16) SIGSTKFLT   17) SIGCHLD 18) SIGCONT 19) SIGSTOP 20) SIGTSTP
-21) SIGTTIN 22) SIGTTOU 23) SIGURG  24) SIGXCPU 25) SIGXFSZ
-26) SIGVTALRM   27) SIGPROF 28) SIGWINCH    29) SIGIO   30) SIGPWR
-31) SIGSYS  34) SIGRTMIN    35) SIGRTMIN+1  36) SIGRTMIN+2  37) SIGRTMIN+3
-38) SIGRTMIN+4  39) SIGRTMIN+5  40) SIGRTMIN+6  41) SIGRTMIN+7  42) SIGRTMIN+8
-43) SIGRTMIN+9  44) SIGRTMIN+10 45) SIGRTMIN+11 46) SIGRTMIN+12 47) SIGRTMIN+13
-48) SIGRTMIN+14 49) SIGRTMIN+15 50) SIGRTMAX-14 51) SIGRTMAX-13 52) SIGRTMAX-12
-53) SIGRTMAX-11 54) SIGRTMAX-10 55) SIGRTMAX-9  56) SIGRTMAX-8  57) SIGRTMAX-7
-58) SIGRTMAX-6  59) SIGRTMAX-5  60) SIGRTMAX-4  61) SIGRTMAX-3  62) SIGRTMAX-2
-63) SIGRTMAX-1  64) SIGRTMAX</code></pre>
-
-
-<p>或是執行</p>
-<pre class="code"><code class="language-bash">$ kill -l</code></pre>
-
-
-<h2 id="002">範例002</h2>
-<p>執行</p>
-<pre class="code"><code class="language-bash">$ trap -p</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>trap -- '' SIGTSTP
-trap -- '' SIGTTIN
-trap -- '' SIGTTOU</code></pre>
-
-
-<h2 id="003">範例003</h2>
-<p>signal.sh</p>
-<pre class="code"><code class="language-bash">#!/usr/bin/env bash
-
-
-trap &quot;echo got signal!&quot; SIGHUP SIGINT
-
-while true; do
-
-        date;
-
-        sleep 1;
-
-done</code></pre>
-
-
-<p>設定可執行</p>
-<pre class="code"><code class="language-bash">$ chmod u+x signal.sh</code></pre>
-
-
-<p>執行</p>
-<pre class="code"><code class="language-bash">$ ./signal.sh</code></pre>
-
-
-<p>另外開啟一個Terminal</p>
-<p>找到剛剛執行的pid</p>
-<p>執行</p>
-<pre class="code"><code class="language-bash">$ ps aux | grep signal.sh</code></pre>
-
-
-<p>或是執行</p>
-<pre class="code"><code class="language-bash">$ pgrep -f ./signal.sh</code></pre>
-
-
-<p>可以找到pid，例如</p>
-<pre class="code"><code>15060</code></pre>
-
-
-<p>然後對這個process發送signal</p>
-<p>執行</p>
-<pre class="code"><code class="language-bash">$ kill -1 15060</code></pre>
-
-
-<p>或是執行</p>
-<pre class="code"><code class="language-bash">$ kill -2 15060</code></pre>
-
-
-<p>就會在一開始執行 signal.sh 那個 Terminal</p>
-<p>看到</p>
-<pre class="code"><code>got signal!
-Tue May 17 20:47:13 CST 20
-...略...</code></pre>
-
-
-<p>上面的的步驟，也可以直接改成執行下面的指令</p>
-<p>執行</p>
-<pre class="code"><code class="language-bash">$ pkill -1 -f ./signal.sh</code></pre>
-
-
-<p>或是執行</p>
-<pre class="code"><code class="language-bash">$ pkill -2 -f ./signal.sh</code></pre>
-
-
-<p>然後執行下面的指令，把剛剛執行的「./signal.sh」關閉</p>
-<p>執行</p>
-<pre class="code"><code class="language-bash">$ pkill -9 -f ./signal.sh</code></pre>
-
-
-<p>或是執行</p>
-<pre class="code"><code>$ kill -9 15060</code></pre>
-
-
-<h2 id="004">範例004</h2>
-<p>server.sh</p>
-<pre class="code"><code class="language-bash">#!/usr/bin/env bash
-
-THE_SIG_HUP=0
-
-handle_signal () {
-        if [ $THE_SIG_HUP = 0 ]; then
-                THE_SIG_HUP=1;
-        else
-
-                THE_SIG_HUP=0;
-        fi
-
-}
-
-trap handle_signal SIGHUP
-
-while true; do
-        #echo $THE_SIG_HUP;
-        if [ $THE_SIG_HUP = 1 ]; then
-                echo 'idle';
-        else
-                date;
-        fi
-
-        sleep 1;
-
-done</code></pre>
-
-
-<p>設定為可執行</p>
-<pre class="code"><code class="language-bash">$ chmod u+x server.sh</code></pre>
-
-
-<p>執行</p>
-<pre class="code"><code class="language-bash">$ ./server.sh</code></pre>
-
-
-<p>顯示</p>
-<pre class="code"><code>Tue May 17 20:56:44 CST 2016
-Tue May 17 20:56:45 CST 2016
-Tue May 17 20:56:46 CST 2016
-Tue May 17 20:56:47 CST 2016</code></pre>
-
-
-<p>然後執行</p>
-<pre class="code"><code class="language-bash">$ pkill -1 -f ./server.sh</code></pre>
-
-
-<p>就會顯示</p>
-<pre class="code"><code>Tue May 17 20:56:48 CST 2016
-idle
-idle
-...略...</code></pre>
+<pre class="code"><code class="language-bash">$ type</code></pre>
 
 
 <p>然後再執行</p>
-<pre class="code"><code class="language-bash">$ pkill -1 -f ./server.sh</code></pre>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
 
 
-<p>就會改成</p>
-<pre class="code"><code>idle
-Tue May 17 20:58:30 CST 2016
-Tue May 17 20:58:31 CST 2016
-Tue May 17 20:58:32 CST 2016
-...略...</code></pre>
+<p>顯示</p>
+<pre class="code"><code>0</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-bash">$ type echo</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>echo is a shell builtin</code></pre>
+
+
+<p>然後再執行</p>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>0</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-bash">$ type x</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>bash: type: x: not found</code></pre>
+
+
+<p>然後再執行</p>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>1</code></pre>
+
+
+<h2 id="_1">執行範例</h2>
+<p>執行</p>
+<pre class="code"><code class="language-bash">$ type echo</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>echo is a shell builtin</code></pre>
+
+
+<p>執行</p>
+<pre class="code"><code class="language-bash">$ type -a echo</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>echo is a shell builtin
+echo is /bin/echo</code></pre>
+
+
+<p>更多請參考「<a href="../enable">enable</a>」和「<a href="https://foreachsam.github.io/book-util-debianutils/book/content/command/which/">which</a>」的說明。</p>
+<p>另外有一個指令是「<a href="http://manpages.ubuntu.com/manpages/xenial/en/man1/file.1.html">file</a>」，用途不太一樣。</p>
 				<aside class="copyright" role="note">
 					 Copyright (c) foreachsam &ndash;  Documentation built with
 					<a href="http://www.mkdocs.org" target="_blank">MkDocs</a> using the
@@ -920,7 +788,7 @@ Tue May 17 20:58:32 CST 2016
 <nav class="pagination" aria-label="Footer">
 	<div class="previous">
 		
-		<a href="../while/" title="while">
+		<a href="../" title="index">
 			<span class="direction">
             上一頁
           </span>
@@ -930,7 +798,7 @@ Tue May 17 20:58:32 CST 2016
 				</div>
 				<div class="stretch">
 					<div class="title">
-						while
+						index
 					</div>
 				</div>
 			</div>
@@ -939,14 +807,14 @@ Tue May 17 20:58:32 CST 2016
 	</div>
 	<div class="next">
 		
-		<a href="../enable/" title="enable">
+		<a href="../colon/" title=":">
 			<span class="direction">
             下一頁
           </span>
 			<div class="page">
 				<div class="stretch">
 					<div class="title">
-						enable
+						:
 					</div>
 				</div>
 				<div class="button button-next" role="button" aria-label="Next">

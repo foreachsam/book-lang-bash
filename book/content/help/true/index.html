@@ -279,6 +279,19 @@
 			
 <li>
 	<div itemscope itemtype="http://schema.org/Article">
+		<a class="" title="type" href="../type/" itemprop="url">
+			type
+    	</a>
+	</div>
+	
+</li>
+
+
+		
+
+			
+<li>
+	<div itemscope itemtype="http://schema.org/Article">
 		<a class="" title=":" href="../colon/" itemprop="url">
 			:
     	</a>
@@ -648,16 +661,25 @@
 				 <h1 id="shell-builtin-command-true">Shell Builtin Command 「true」</h1>
 <h2 id="type-true">type true</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ type true</code></pre>
+<pre class="code"><code class="language-bash">$ type true</code></pre>
 
 
 <p>顯示</p>
 <pre class="code"><code>true is a shell builtin</code></pre>
 
 
+<p>執行</p>
+<pre class="code"><code class="language-bash">$ type -a true</code></pre>
+
+
+<p>顯示</p>
+<pre class="code"><code>true is a shell builtin
+true is /bin/true</code></pre>
+
+
 <h2 id="help-true">help true</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ help true</code></pre>
+<pre class="code"><code class="language-bash">$ help true</code></pre>
 
 
 <p>顯示</p>
@@ -670,12 +692,12 @@
 
 <h2 id="exit-status">Exit Status</h2>
 <p>執行</p>
-<pre class="code"><code class="language-sh">$ true</code></pre>
+<pre class="code"><code class="language-bash">$ true</code></pre>
 
 
 <p>沒有任何顯示，直接換下一個提示字元</p>
 <p>再執行</p>
-<pre class="code"><code class="language-sh">$ echo $?</code></pre>
+<pre class="code"><code class="language-bash">$ echo $?</code></pre>
 
 
 <p>顯示</p>
